@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="67573e1e-ea36-4894-8249-8e16b6a1242c"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1803,6 +1803,214 @@
         Id="4557f549-dc69-4adf-a895-5168ca47f623"
         LastKnownName="Model"
         LastKnownLocation="Package1_1104.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="c7dac9dc-9671-49d8-b2e3-022429dc1e26"
+        name="Bruger"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="8830adb3-059b-4239-8e6f-9951d713ec89"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Opret bruger"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bd8f361e-c4fb-4056-a9d3-43d7278578dc"
+              LastKnownName="Opret bruger"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="03677da2-ec94-4df4-9c59-d41f027a3609"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2e12767b-eb31-4c49-9d26-b4ac550052ec"
+                  name="Opret bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="41931755-d2b0-42a0-8039-8381bba7a268"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="UseCase11"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c4ebd376-9b2a-4e14-b976-1062216c749e"
+              LastKnownName="Bruger Login"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96a02f5d-6a18-4cef-a04d-b1c1a17ed7ba"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f3691f5d-b24f-4b8b-af52-e2b4335e56ab"
+                  name="UseCase11"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="98064e2f-3de5-4ef7-b69d-813cc46edc04"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Navigation i programet"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2a8e0ded-3557-4bbf-8111-12dad6c328c6"
+              LastKnownName="Navigation i programet"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="76ef6f54-3e41-4f65-8339-6a9030324a1b"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1ca4714e-f5fd-44de-812a-13fc582dd10a"
+                  name="Navigation i programet"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="403cf93e-640e-4d8d-9b97-93aa866f639d"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Gemme/Fjerne Favoriter"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c7815465-e4ae-45f0-af2d-4369e15e6f3c"
+              LastKnownName="Gemme/Fjerne Favoriter"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aed2c37c-e8fb-4897-8e74-f0d6555446bf"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="59c3d6ef-fe33-42f6-b261-42ef4fd5d32b"
+                  name="Gemme/Fjerne Favoriter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bd8f361e-c4fb-4056-a9d3-43d7278578dc"
+        name="Opret bruger"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c4ebd376-9b2a-4e14-b976-1062216c749e"
+        name="Bruger Login"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2a8e0ded-3557-4bbf-8111-12dad6c328c6"
+        name="Navigation i programet"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c7815465-e4ae-45f0-af2d-4369e15e6f3c"
+        name="Gemme/Fjerne Favoriter"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="064f6462-26e7-4fae-bf0f-c6ad2b6a1cd0"
+        name="UseCase14"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1910bb35-029d-468e-864b-27e28a8b6d22"
+        name="UseCase15"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

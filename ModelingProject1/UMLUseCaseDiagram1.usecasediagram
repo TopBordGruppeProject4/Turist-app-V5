@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9fc60f75-6d53-4ae6-8c26-3c03b5f0e392" name="UMLUseCaseDiagram1" linkedPackageId="1ca715ef-097e-4d90-9239-4f571aa0cf11" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="5d76feb6-5699-4249-820f-2b8959ded37b">
+      <profileInstance Id="b311c846-b4e4-4706-8dac-821cd9bbc27e" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d4229bc9-6c29-4c4f-bdc3-befc1e0b2d93">
+      <profileInstance Id="ea9b9f2e-4c7c-49db-afa3-fe83f99d17fc" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="ea98d54d-c303-4a5c-9066-aed1dd19101c" name="Bruger" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c7dac9dc-9671-49d8-b2e3-022429dc1e26" />
+        <targetEnds>
+          <association Id="d45b5ba5-5d61-48b6-aad0-15155656a4c5" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Opret bruger" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="914d15cc-2ecb-482e-976f-456a90ed8098" LastKnownName="Opret bruger" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="822eef92-ebff-4322-be6e-0e5cb84a3f21" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="03677da2-ec94-4df4-9c59-d41f027a3609" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb6de87e-23c4-47fa-bee7-2bc9e53f8cc5" name="Opret bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2e12767b-eb31-4c49-9d26-b4ac550052ec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8830adb3-059b-4239-8e6f-9951d713ec89" />
+          </association>
+          <association Id="19cdeee2-8574-4d40-8a34-8dbc7e6b9373" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="UseCase11" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b63cbde9-de94-4b82-9fc6-1b16bd4b3ba8" LastKnownName="Bruger Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9ef0d2b6-7eb6-47e3-adfa-c29d765dfed1" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="96a02f5d-6a18-4cef-a04d-b1c1a17ed7ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dffdb5cf-ff3d-4126-95fd-cc70167089b9" name="UseCase11" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f3691f5d-b24f-4b8b-af52-e2b4335e56ab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="41931755-d2b0-42a0-8039-8381bba7a268" />
+          </association>
+          <association Id="ce2bbc77-4036-462d-8ada-1b806062026b" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Navigation i programet" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="edbce1db-6015-4aa2-a618-f656a0b8da20" LastKnownName="Navigation i programet" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7666087f-20d3-470e-b143-7a56e662b64e" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="76ef6f54-3e41-4f65-8339-6a9030324a1b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a93ed12-8013-4b19-9714-c6627d7c890e" name="Navigation i programet" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1ca4714e-f5fd-44de-812a-13fc582dd10a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="98064e2f-3de5-4ef7-b69d-813cc46edc04" />
+          </association>
+          <association Id="ac653f04-ac37-4f4e-955b-fa3d8d86a574" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Gemme/Fjerne Favoriter" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5246aa83-8f34-4947-8fa5-0375bb204212" LastKnownName="Gemme/Fjerne Favoriter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="06ce7508-86b1-4303-bcd9-8eef37101c7e" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="aed2c37c-e8fb-4897-8e74-f0d6555446bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f5b76cf-8d3b-4532-ad71-36bad98bbd3d" name="Gemme/Fjerne Favoriter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="59c3d6ef-fe33-42f6-b261-42ef4fd5d32b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="403cf93e-640e-4d8d-9b97-93aa866f639d" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="914d15cc-2ecb-482e-976f-456a90ed8098" name="Opret bruger" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bd8f361e-c4fb-4056-a9d3-43d7278578dc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b63cbde9-de94-4b82-9fc6-1b16bd4b3ba8" name="Bruger Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c4ebd376-9b2a-4e14-b976-1062216c749e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="edbce1db-6015-4aa2-a618-f656a0b8da20" name="Navigation i programet" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2a8e0ded-3557-4bbf-8111-12dad6c328c6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5246aa83-8f34-4947-8fa5-0375bb204212" name="Gemme/Fjerne Favoriter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c7815465-e4ae-45f0-af2d-4369e15e6f3c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="1ca715ef-097e-4d90-9239-4f571aa0cf11" name="ModelingProject1">
+    <elementDefinition Id="67573e1e-ea36-4894-8249-8e16b6a1242c" />
+  </package>
+</useCaseModelRoot>
