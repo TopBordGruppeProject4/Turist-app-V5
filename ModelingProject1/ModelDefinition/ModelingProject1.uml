@@ -1937,7 +1937,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="c7815465-e4ae-45f0-af2d-4369e15e6f3c"
-              LastKnownName="Gemme/Fjerne Favoriter"
+              LastKnownName="Tilføj/Fjern Favorit"
               LastKnownLocation="ModelingProject1.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1994,7 +1994,7 @@
     <packageHasNamedElement>
       <useCase
         Id="c7815465-e4ae-45f0-af2d-4369e15e6f3c"
-        name="Gemme/Fjerne Favoriter"
+        name="Tilføj/Fjern Favorit"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
