@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="41acc29c-5284-4b80-a6f4-c6a59809e0c2" name="UMLClassDiagram2" linkedPackageId="fa6a8904-05fd-42ce-b6ae-aede7bfd966c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="04d7b3fc-179d-4065-8d65-911dff10f87f">
-      <profileInstance Id="bd17815a-3db9-4ead-b0a3-503d8a321ebf" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="620ca0ab-77e4-4ef9-96f3-025dc9c688cc">
-      <profileInstance Id="f1245008-5d3c-4e28-a0a2-39a9a949bd3a" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="41acc29c-5284-4b80-a6f4-c6a59809e0c2" name="UMLClassDiagram2" linkedPackageId="fa6a8904-05fd-42ce-b6ae-aede7bfd966c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="593c7eaf-a9bf-4a09-a1e5-985b1fe978f6" name="View">
@@ -144,6 +130,24 @@
           <packageHasNamedElement>
             <class Id="6c0c5ecf-eaa0-44a1-9d86-23b424336de6" name="Mainviewmodel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="901f1032-b3df-4895-a541-d8437fb9a2cb" />
+              <targetEnds>
+                <association Id="16e1383d-2518-449b-8264-f259f5261a4d" isDerived="false" sourceEndRoleName="Mainviewmodel" targetEndRoleName="Gallery" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="9c0d0eee-c942-44d9-83d0-cfa77eaf3c07" LastKnownName="Gallery" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="dd4571d3-c463-4fff-9f4e-fdc16dd7279d" name="Mainviewmodel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="7b85682b-7fcc-4653-99a0-d62272a30b48" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="9198ad88-3883-433c-b7e2-390f85aa668a" name="Gallery" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="8325568e-aaa9-4f2b-be98-4eada057d4ff" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="27eae57a-1fdf-4177-a463-2f727904a8d3" />
+                </association>
+              </targetEnds>
               <ownedAttributesInternal>
                 <property Id="c1a25abe-0331-44e7-a522-7e290c91d79d" name="SelectedGallery" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="2afc4311-226d-4aa7-89ad-dbea183a3c06" />
@@ -261,7 +265,7 @@
                   <classMoniker Id="0c038406-428c-495e-be5c-97b12f90baea" LastKnownName="UserList" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
-                      <memberEnd Id="61a13309-5a50-4286-a07c-7c7f89ed657a" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                      <memberEnd Id="61a13309-5a50-4286-a07c-7c7f89ed657a" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                         <lowerValueInternal>
                           <literalString Id="67f33bf1-be48-435d-a5d9-574e64c164a3" name="Lower" value="*">
                             <elementDefinition Id="7520c3cf-d264-4360-b07c-16950bcb251a" />
@@ -504,5 +508,19 @@
   </packagedElements>
   <package Id="fa6a8904-05fd-42ce-b6ae-aede7bfd966c" name="ModelingProject1">
     <elementDefinition Id="67573e1e-ea36-4894-8249-8e16b6a1242c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="04d7b3fc-179d-4065-8d65-911dff10f87f">
+        <profileInstance Id="bd17815a-3db9-4ead-b0a3-503d8a321ebf" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="620ca0ab-77e4-4ef9-96f3-025dc9c688cc">
+        <profileInstance Id="f1245008-5d3c-4e28-a0a2-39a9a949bd3a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

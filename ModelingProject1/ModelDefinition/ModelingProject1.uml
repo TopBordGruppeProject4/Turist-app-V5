@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="67573e1e-ea36-4894-8249-8e16b6a1242c"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -123,6 +123,47 @@
                 <memberEnd
                   Id="55f5dfb3-06d1-4982-8ce8-c115bb4fdbc2"
                   name="Userlist"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="931d3cfd-751b-4926-8c60-3b066e630d65"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Picture"
+            isLeaf="false"
+            name="Favoritter"
+            isAbstract="false">
+            <classMoniker
+              Id="5150cf1d-d46f-452f-aaa3-7adb46d5ecdc"
+              LastKnownName="Picture"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36845ed9-9c76-414d-ae81-a920b9b6ea53"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="374f4160-4513-4be5-b8c7-799ceefcb43a"
+                  name="Picture"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -292,14 +333,6 @@
             isComposite="false" />
         </ownedAttributesInternal>
       </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="7eae5081-ce8c-4079-8444-049d55310b19"
-        name="Login"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <interaction
@@ -701,8 +734,8 @@
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="7eae5081-ce8c-4079-8444-049d55310b19"
+              <undefinedTypeMoniker
+                Id="0dff7ef6-1be9-4926-ab41-db57e1f5c593"
                 LastKnownName="Login"
                 LastKnownLocation="ModelingProject1.uml" />
             </type_NamedElement>
@@ -789,6 +822,18 @@
               <messageOccurrenceSpecificationMoniker
                 Id="d861562f-a304-4581-8137-aff839251ee9"
                 LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="ModelingProject1.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d033eef0-f531-4ce1-a56e-48b7b0a88e48"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="d400281e-d9d8-447f-8f09-0ed766d2e107"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="ModelingProject1.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="8a54395d-8851-47bb-abab-d7a3a6217e5f"
+                LastKnownName="ExecutionOccurrenceSpecification16"
                 LastKnownLocation="ModelingProject1.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="64a712bf-1965-4818-b520-656c085425b5"
@@ -929,12 +974,12 @@
             customInteractionOperator="Opt if check name false">
             <coveredLifelines>
               <lifelineMoniker
-                Id="981b9fcf-22d1-43bf-98df-19fe2ca6bcc4"
-                LastKnownName=": user"
-                LastKnownLocation="ModelingProject1.uml" />
-              <lifelineMoniker
                 Id="eabba940-7a36-46fa-9bc1-795f210db683"
                 LastKnownName=": Userlist"
+                LastKnownLocation="ModelingProject1.uml" />
+              <lifelineMoniker
+                Id="981b9fcf-22d1-43bf-98df-19fe2ca6bcc4"
+                LastKnownName=": user"
                 LastKnownLocation="ModelingProject1.uml" />
             </coveredLifelines>
             <operands>
@@ -943,12 +988,12 @@
                 name="InteractionOperand1">
                 <coveredLifelines>
                   <lifelineMoniker
-                    Id="981b9fcf-22d1-43bf-98df-19fe2ca6bcc4"
-                    LastKnownName=": user"
-                    LastKnownLocation="ModelingProject1.uml" />
-                  <lifelineMoniker
                     Id="eabba940-7a36-46fa-9bc1-795f210db683"
                     LastKnownName=": Userlist"
+                    LastKnownLocation="ModelingProject1.uml" />
+                  <lifelineMoniker
+                    Id="981b9fcf-22d1-43bf-98df-19fe2ca6bcc4"
+                    LastKnownName=": user"
                     LastKnownLocation="ModelingProject1.uml" />
                 </coveredLifelines>
                 <guard>
@@ -1047,22 +1092,22 @@
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="01f6ea01-e62d-4ec5-95be-23cbee5beead"
-            name="MessageOccurrenceSpecification21">
-            <covered>
-              <lifelineMoniker
-                Id="eabba940-7a36-46fa-9bc1-795f210db683"
-                LastKnownName=": Userlist"
-                LastKnownLocation="ModelingProject1.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="e357bd57-8885-46c4-b4e6-0d55e280404f"
             name="MessageOccurrenceSpecification22">
             <covered>
               <lifelineMoniker
                 Id="981b9fcf-22d1-43bf-98df-19fe2ca6bcc4"
                 LastKnownName=": user"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="01f6ea01-e62d-4ec5-95be-23cbee5beead"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="eabba940-7a36-46fa-9bc1-795f210db683"
+                LastKnownName=": Userlist"
                 LastKnownLocation="ModelingProject1.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1101,6 +1146,90 @@
               <lifelineMoniker
                 Id="981b9fcf-22d1-43bf-98df-19fe2ca6bcc4"
                 LastKnownName=": user"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d033eef0-f531-4ce1-a56e-48b7b0a88e48"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="eabba940-7a36-46fa-9bc1-795f210db683"
+                LastKnownName=": Userlist"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="1a0e3dbb-381b-4ee0-89a7-9c6e7a69659f"
+            name="BehaviorExecutionSpecification8">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="eabba940-7a36-46fa-9bc1-795f210db683"
+                LastKnownName=": Userlist"
+                LastKnownLocation="ModelingProject1.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="8a54395d-8851-47bb-abab-d7a3a6217e5f"
+                LastKnownName="ExecutionOccurrenceSpecification16"
+                LastKnownLocation="ModelingProject1.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="d400281e-d9d8-447f-8f09-0ed766d2e107"
+                LastKnownName="ExecutionOccurrenceSpecification15"
+                LastKnownLocation="ModelingProject1.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="7c6f8d37-b64f-44b0-bbae-649daa8cfd5e"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="ModelingProject1.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="d400281e-d9d8-447f-8f09-0ed766d2e107"
+            name="ExecutionOccurrenceSpecification15">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fed39972-6964-492c-912f-2d003e4e828f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="eabba940-7a36-46fa-9bc1-795f210db683"
+                LastKnownName=": Userlist"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7c6f8d37-b64f-44b0-bbae-649daa8cfd5e"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="eabba940-7a36-46fa-9bc1-795f210db683"
+                LastKnownName=": Userlist"
+                LastKnownLocation="ModelingProject1.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="8a54395d-8851-47bb-abab-d7a3a6217e5f"
+            name="ExecutionOccurrenceSpecification16">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="83e9aa31-19cd-4080-b2c9-417e7c789079"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="eabba940-7a36-46fa-9bc1-795f210db683"
+                LastKnownName=": Userlist"
                 LastKnownLocation="ModelingProject1.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -1304,6 +1433,25 @@
             </receiveEvent>
           </message>
           <message
+            Id="d54ac53a-be9c-4b15-b630-47efbd7e35bc"
+            name="AddUser"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d033eef0-f531-4ce1-a56e-48b7b0a88e48"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="ModelingProject1.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7c6f8d37-b64f-44b0-bbae-649daa8cfd5e"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="ModelingProject1.uml" />
+            </receiveEvent>
+          </message>
+          <message
             Id="fabb6b2e-861d-4001-8555-c315f7c2efa9"
             name="textdialog()"
             messageKind="Complete"
@@ -1375,50 +1523,7 @@
         name="Userlist"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="4babd66f-0286-44ec-90e1-a6b6122731a9"
-            isDerived="false"
-            sourceEndRoleName="Userlist"
-            targetEndRoleName="Login"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="7eae5081-ce8c-4079-8444-049d55310b19"
-              LastKnownName="Login"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a280ddb5-dd92-4edb-96a9-df8c5546698b"
-                  name="Userlist"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="6df1fd1a-e426-4778-9f30-8a797cbf421b"
-                  name="Login"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </class>
+        isActiveClass="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
@@ -1898,7 +2003,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="2a8e0ded-3557-4bbf-8111-12dad6c328c6"
-              LastKnownName="Navigation i programet"
+              LastKnownName="Naviger til oplevelser"
               LastKnownLocation="ModelingProject1.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -1967,6 +2072,84 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="f75bcc6d-1103-4c42-87d5-60a8a23d8f84"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Naviger til specifikke oplevelser"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b866c5ac-2fbb-4061-af52-6216328420d7"
+              LastKnownName="Naviger til specifikke oplevelser"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7bfb027-fcaa-4a85-8680-dafd38196b33"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a1a7d91-c7e2-400a-869f-e0a7c1886f41"
+                  name="Naviger til specifikke oplevelser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f03daf15-d77f-4b6f-9d82-21b5b078199a"
+            isDerived="false"
+            sourceEndRoleName="Bruger"
+            targetEndRoleName="Naviger til væg med favoritter"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="99de1b2f-209b-4be3-98a3-8cb4d4bb2c18"
+              LastKnownName="Naviger til væg med favoritter"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5205723c-3044-498a-b697-cd4c46d71681"
+                  name="Bruger"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="800207f4-3fde-4394-90ca-64dfb0528556"
+                  name="Naviger til væg med favoritter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -1987,7 +2170,7 @@
     <packageHasNamedElement>
       <useCase
         Id="2a8e0ded-3557-4bbf-8111-12dad6c328c6"
-        name="Navigation i programet"
+        name="Naviger til oplevelser"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -2011,6 +2194,35 @@
         name="UseCase15"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b866c5ac-2fbb-4061-af52-6216328420d7"
+        name="Naviger til specifikke oplevelser"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="99de1b2f-209b-4be3-98a3-8cb4d4bb2c18"
+        name="Naviger til væg med favoritter"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0dff7ef6-1be9-4926-ab41-db57e1f5c593"
+        name="Login" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fed39972-6964-492c-912f-2d003e4e828f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="83e9aa31-19cd-4080-b2c9-417e7c789079"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9fc60f75-6d53-4ae6-8c26-3c03b5f0e392" name="UMLUseCaseDiagram1" linkedPackageId="1ca715ef-097e-4d90-9239-4f571aa0cf11" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="9fc60f75-6d53-4ae6-8c26-3c03b5f0e392" name="UMLUseCaseDiagram1" linkedPackageId="1ca715ef-097e-4d90-9239-4f571aa0cf11" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="ea98d54d-c303-4a5c-9066-aed1dd19101c" name="Bruger" isAbstract="false" isLeaf="false">
@@ -38,7 +38,7 @@
             <elementDefinition Id="41931755-d2b0-42a0-8039-8381bba7a268" />
           </association>
           <association Id="ce2bbc77-4036-462d-8ada-1b806062026b" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Navigation i programet" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="edbce1db-6015-4aa2-a618-f656a0b8da20" LastKnownName="Navigation i programet" />
+            <useCaseMoniker Id="edbce1db-6015-4aa2-a618-f656a0b8da20" LastKnownName="Naviger til oplevelser" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="7666087f-20d3-470e-b143-7a56e662b64e" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -69,6 +69,38 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="403cf93e-640e-4d8d-9b97-93aa866f639d" />
           </association>
+          <association Id="ff70d85d-fc3f-402f-ba01-e11f4a95a147" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Naviger til specifikke oplevelser" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f18aa551-97b9-4928-8579-4ebae81a8f7f" LastKnownName="Naviger til specifikke oplevelser" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fedf46ed-a0d8-409e-9835-1db0e721d95f" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d7bfb027-fcaa-4a85-8680-dafd38196b33" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d4324e58-163f-48c3-bf44-eceb27a428b2" name="Naviger til specifikke oplevelser" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2a1a7d91-c7e2-400a-869f-e0a7c1886f41" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f75bcc6d-1103-4c42-87d5-60a8a23d8f84" />
+          </association>
+          <association Id="ce863237-ac25-4796-b312-202f1f5c2968" isDerived="false" sourceEndRoleName="Bruger" targetEndRoleName="Naviger til væg med favoritter" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d36682b4-42f5-4848-8aa2-afb54e04bfca" LastKnownName="Naviger til væg med favoritter" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4fd944a-35b9-4d0a-a03a-10b9f115720a" name="Bruger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5205723c-3044-498a-b697-cd4c46d71681" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b4eb6f0d-13dd-43ed-a530-33deeebe1740" name="Naviger til væg med favoritter" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="800207f4-3fde-4394-90ca-64dfb0528556" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f03daf15-d77f-4b6f-9d82-21b5b078199a" />
+          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -83,13 +115,23 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="edbce1db-6015-4aa2-a618-f656a0b8da20" name="Navigation i programet" isAbstract="false" isLeaf="false">
+      <useCase Id="edbce1db-6015-4aa2-a618-f656a0b8da20" name="Naviger til oplevelser" isAbstract="false" isLeaf="false">
         <elementDefinition Id="2a8e0ded-3557-4bbf-8111-12dad6c328c6" />
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
       <useCase Id="5246aa83-8f34-4947-8fa5-0375bb204212" name="Tilføj/Fjern Favorit" isAbstract="false" isLeaf="false">
         <elementDefinition Id="c7815465-e4ae-45f0-af2d-4369e15e6f3c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f18aa551-97b9-4928-8579-4ebae81a8f7f" name="Naviger til specifikke oplevelser" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b866c5ac-2fbb-4061-af52-6216328420d7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d36682b4-42f5-4848-8aa2-afb54e04bfca" name="Naviger til væg med favoritter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="99de1b2f-209b-4be3-98a3-8cb4d4bb2c18" />
       </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>

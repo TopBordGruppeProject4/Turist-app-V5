@@ -2,7 +2,7 @@
 <useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLUseCaseDiagram1">
   <useCaseModelRootMoniker Id="9fc60f75-6d53-4ae6-8c26-3c03b5f0e392" />
   <nestedChildShapes>
-    <actorShape Id="7b25bf65-cbfb-45a9-a3d6-cff6f6b0301a" absoluteBounds="1.625, 1, 0.5, 0.5" isReference="false" heightOffset="0">
+    <actorShape Id="7b25bf65-cbfb-45a9-a3d6-cff6f6b0301a" absoluteBounds="1.5, 3, 0.5, 0.5" isReference="false" heightOffset="0">
       <actorMoniker Id="ea98d54d-c303-4a5c-9066-aed1dd19101c" LastKnownName="Bruger" />
       <relativeChildShapes />
     </actorShape>
@@ -10,7 +10,7 @@
       <useCaseMoniker Id="914d15cc-2ecb-482e-976f-456a90ed8098" LastKnownName="Opret bruger" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseAssociationConnector edgePoints="[(2.125 : 1.25); (3.125 : 1.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(1.984375 : 3); (3.41278306188464 : 1.47636473398972)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="d45b5ba5-5d61-48b6-aad0-15155656a4c5" />
       <relativeChildShapes />
       <nodes>
@@ -22,7 +22,7 @@
       <useCaseMoniker Id="b63cbde9-de94-4b82-9fc6-1b16bd4b3ba8" LastKnownName="Bruger Login" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseAssociationConnector edgePoints="[(2.125 : 1.37821775955209); (3.15947895115585 : 1.90877205323608)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(2 : 3.08333333333333); (3.325 : 2.2)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="19cdeee2-8574-4d40-8a34-8dbc7e6b9373" />
       <relativeChildShapes />
       <nodes>
@@ -31,10 +31,10 @@
       </nodes>
     </useCaseAssociationConnector>
     <useCaseShape Id="5a4b1968-bed6-4e0a-9e45-5af8e8c7c792" absoluteBounds="3.125, 2.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
-      <useCaseMoniker Id="edbce1db-6015-4aa2-a618-f656a0b8da20" LastKnownName="Navigation i programet" />
+      <useCaseMoniker Id="edbce1db-6015-4aa2-a618-f656a0b8da20" LastKnownName="Naviger til oplevelser" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseAssociationConnector edgePoints="[(2.12210982785129 : 1.5); (3.21571641129044 : 2.60639729806422)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(2 : 3.18333333333333); (3.18382352941176 : 2.86764705882353)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="ce2bbc77-4036-462d-8ada-1b806062026b" />
       <relativeChildShapes />
       <nodes>
@@ -42,16 +42,40 @@
         <useCaseShapeMoniker Id="5a4b1968-bed6-4e0a-9e45-5af8e8c7c792" />
       </nodes>
     </useCaseAssociationConnector>
-    <useCaseShape Id="023ed533-5908-4ebc-852e-a190b308fbb9" absoluteBounds="3.125, 3.25, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+    <useCaseShape Id="023ed533-5908-4ebc-852e-a190b308fbb9" absoluteBounds="3.125, 5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
       <useCaseMoniker Id="5246aa83-8f34-4947-8fa5-0375bb204212" LastKnownName="Tilføj/Fjern Favorit" />
       <relativeChildShapes />
     </useCaseShape>
-    <useCaseAssociationConnector edgePoints="[(2.02820591634359 : 1.5); (3.18251387010002 : 3.38358906317904)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(1.984375 : 3.5); (3.41278306188464 : 5.02363526601028)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="ac653f04-ac37-4f4e-955b-fa3d8d86a574" />
       <relativeChildShapes />
       <nodes>
         <actorShapeMoniker Id="7b25bf65-cbfb-45a9-a3d6-cff6f6b0301a" />
         <useCaseShapeMoniker Id="023ed533-5908-4ebc-852e-a190b308fbb9" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="64a71987-64f1-4d22-be95-0cb80dbf6302" absoluteBounds="3.125, 3.125, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="f18aa551-97b9-4928-8579-4ebae81a8f7f" LastKnownName="Naviger til specifikke oplevelser" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2 : 3.28333333333333); (3.13271874610705 : 3.43436249948094)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="ff70d85d-fc3f-402f-ba01-e11f4a95a147" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="7b25bf65-cbfb-45a9-a3d6-cff6f6b0301a" />
+        <useCaseShapeMoniker Id="64a71987-64f1-4d22-be95-0cb80dbf6302" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="24af6908-c7d3-4585-be67-60bc47a21e7d" absoluteBounds="3.125, 4, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="d36682b4-42f5-4848-8aa2-afb54e04bfca" LastKnownName="Naviger til væg med favoritter" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(2 : 3.4); (3.23456559527849 : 4.14073935716709)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="ce863237-ac25-4796-b312-202f1f5c2968" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="7b25bf65-cbfb-45a9-a3d6-cff6f6b0301a" />
+        <useCaseShapeMoniker Id="24af6908-c7d3-4585-be67-60bc47a21e7d" />
       </nodes>
     </useCaseAssociationConnector>
   </nestedChildShapes>
