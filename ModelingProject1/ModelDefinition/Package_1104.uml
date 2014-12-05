@@ -18,6 +18,7 @@
             sourceEndRoleName="Mainviewmodel"
             targetEndRoleName="Gallery"
             isLeaf="false"
+            name="SelectedGallery"
             isAbstract="false">
             <classMoniker
               Id="916cfe59-263f-4dcc-a1a2-2ef80e5445c8"
@@ -51,45 +52,47 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-        </targetEnds>
-        <ownedAttributesInternal>
-          <property
-            Id="2afc4311-226d-4aa7-89ad-dbea183a3c06"
-            name="SelectedGallery"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
+          <association
+            Id="faf6762c-f11d-4e18-a4f1-928ff5b1354c"
             isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="9e184909-97f9-468b-8e21-65bcf7291c47"
-                LastKnownName="string"
-                LastKnownLocation="Package1_1104.uml" />
-            </type_NamedElement>
-          </property>
-          <property
-            Id="fe95815c-cd57-4bf1-9da1-320d492037f6"
+            sourceEndRoleName="Mainviewmodel"
+            targetEndRoleName="Picture"
+            isLeaf="false"
             name="SelectedPicture"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="9e184909-97f9-468b-8e21-65bcf7291c47"
-                LastKnownName="string"
-                LastKnownLocation="Package1_1104.uml" />
-            </type_NamedElement>
-          </property>
-        </ownedAttributesInternal>
+            isAbstract="false">
+            <classMoniker
+              Id="b841a410-16db-430c-889d-78c3571bb135"
+              LastKnownName="Picture"
+              LastKnownLocation="Package1_1104.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="52a91b91-bbd1-49bb-bc08-41dcb8749121"
+                  name="Mainviewmodel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0831ab0b-5ae4-4e8a-b301-58027529157a"
+                  name="Picture"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -201,7 +204,7 @@
             <classMoniker
               Id="71d2f001-4262-4deb-ac5c-d01a0caa2352"
               LastKnownName="Login"
-              LastKnownLocation="Package1_1104.uml" />
+              LastKnownLocation="Package_1104.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -284,6 +287,104 @@
           <operation
             Id="6b9b0ffc-7f72-4f2b-8112-ffe60d45c853"
             name="LoginCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="71d2f001-4262-4deb-ac5c-d01a0caa2352"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="6f73ea60-51e6-4a93-abd3-d141e70be7c2"
+            isDerived="false"
+            sourceEndRoleName="Login"
+            targetEndRoleName="UserList"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fb108b73-33eb-4fbe-9214-57839eff5808"
+              LastKnownName="UserList"
+              LastKnownLocation="Package1_1104.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b00cac80-e111-4e7e-a760-d53c8ac9abaa"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="17a1f842-6027-4728-8191-96fa0cd1e85b"
+                  name="UserList"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="fde0d668-cca1-414b-b563-c77c6751a853"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9e184909-97f9-468b-8e21-65bcf7291c47"
+                LastKnownName="string"
+                LastKnownLocation="Package1_1104.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="91749688-7781-40a0-9b8d-4dc5c287e7e8"
+            name="Password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="9e184909-97f9-468b-8e21-65bcf7291c47"
+                LastKnownName="string"
+                LastKnownLocation="Package1_1104.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8211033f-6e39-4040-91da-66cb9fad9d81"
+            name="Login"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
