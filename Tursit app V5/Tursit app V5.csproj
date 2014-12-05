@@ -103,6 +103,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Folder Include="view\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -111,7 +112,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="model\Gallery.cs" />
+    <Compile Include="model\Picture.cs" />
+    <Compile Include="model\User.cs" />
+    <Compile Include="model\Userlist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="viewmodel\Login.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
