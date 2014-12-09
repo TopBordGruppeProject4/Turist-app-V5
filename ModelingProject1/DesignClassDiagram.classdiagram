@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="41acc29c-5284-4b80-a6f4-c6a59809e0c2" name="UMLClassDiagram2" linkedPackageId="fa6a8904-05fd-42ce-b6ae-aede7bfd966c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="41acc29c-5284-4b80-a6f4-c6a59809e0c2" name="UMLClassDiagram2" linkedPackageId="fa6a8904-05fd-42ce-b6ae-aede7bfd966c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="593c7eaf-a9bf-4a09-a1e5-985b1fe978f6" name="View">
@@ -147,21 +147,39 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="27eae57a-1fdf-4177-a463-2f727904a8d3" />
                 </association>
+                <association Id="aae826b2-a34a-44a0-ba92-1f2279b61e0b" isDerived="false" sourceEndRoleName="Mainviewmodel" targetEndRoleName="Gallery" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="9c0d0eee-c942-44d9-83d0-cfa77eaf3c07" LastKnownName="Gallery" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a9aa80c8-41b0-43f2-b9c9-dbbf5f83b916" name="Mainviewmodel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="e1368247-c462-4460-ae1a-7e75cb6aca3e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="01e28f47-76d9-4a64-8815-67f3382213fc" name="Gallery" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="51857c27-80c2-46a9-befe-bfae29ab380b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="92f005ff-7d7b-40a9-9ff5-8e8151c5dd29" />
+                </association>
+                <association Id="58573de9-c41d-42d0-8814-8be5069e363e" isDerived="false" sourceEndRoleName="Mainviewmodel" targetEndRoleName="Picture" isLeaf="false" name="SelectedPicture" isAbstract="false">
+                  <classMoniker Id="94360f68-17eb-4732-9e56-78194e4a83c5" LastKnownName="Picture" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4dce0c21-d47c-44a8-aabb-cfa832629526" name="Mainviewmodel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="ae1fee23-eef1-4910-8473-a5992df50d8f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="dcfab346-359f-4dfb-8892-23c50ad0b97a" name="Picture" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="fa49cee0-d2d3-4e4e-a7cc-6bb596c7212a" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="eae38e44-5630-4b77-ae5b-48dbfcec9b88" />
+                </association>
               </targetEnds>
-              <ownedAttributesInternal>
-                <property Id="c1a25abe-0331-44e7-a522-7e290c91d79d" name="SelectedGallery" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="2afc4311-226d-4aa7-89ad-dbea183a3c06" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="5692a3bf-7caf-4c3d-a41b-5a05018ad9b9" LastKnownName="string" />
-                  </type_NamedElement>
-                </property>
-                <property Id="af399866-3192-471f-bdc6-660422157bd7" name="SelectedPicture" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="fe95815c-cd57-4bf1-9da1-320d492037f6" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="5692a3bf-7caf-4c3d-a41b-5a05018ad9b9" LastKnownName="string" />
-                  </type_NamedElement>
-                </property>
-              </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -331,11 +349,6 @@
           <packageHasNamedElement>
             <class Id="0c038406-428c-495e-be5c-97b12f90baea" name="UserList" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="fb108b73-33eb-4fbe-9214-57839eff5808" />
-              <ownedAttributesInternal>
-                <property Id="11a54edb-b062-41c2-85d5-e0278efe4009" name="Observarblecollection&lt;User&gt;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="4f20c799-c8e4-424f-8bdf-b149028eec1d" />
-                </property>
-              </ownedAttributesInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -410,7 +423,7 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="19cf9ace-e0a3-47f1-981e-7927d3b817ed" />
                 </association>
-                <association Id="19034a47-67f0-4cb2-a367-ee1a304b0d20" isDerived="false" sourceEndRoleName="Gallery" targetEndRoleName="Mainviewmodel" isLeaf="false" isAbstract="false">
+                <association Id="19034a47-67f0-4cb2-a367-ee1a304b0d20" isDerived="false" sourceEndRoleName="Gallery" targetEndRoleName="Mainviewmodel" isLeaf="false" name="SelectedGallery" isAbstract="false">
                   <classMoniker Id="6c0c5ecf-eaa0-44a1-9d86-23b424336de6" LastKnownName="Mainviewmodel" />
                   <relationshipOwnedElementsInternal>
                     <associationHasOwnedEnds>
@@ -449,9 +462,6 @@
                   <type_NamedElement>
                     <referencedTypeMoniker Id="5692a3bf-7caf-4c3d-a41b-5a05018ad9b9" LastKnownName="string" />
                   </type_NamedElement>
-                </property>
-                <property Id="81f4227a-7198-46ee-92fe-ccf2df7dcace" name="observablecollection&lt;Picture&gt;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="ec3521e3-58a5-42fd-8a96-e15122d59c3a" />
                 </property>
               </ownedAttributesInternal>
             </class>
