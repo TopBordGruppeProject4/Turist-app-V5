@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ namespace Tursit_app_V5.model
         public int NumberOfChildren { get; set; }
         public string Relationship { get; set; }
 
+        public ObservableCollection<Picture> Favourites { get; set; }
+
         public User(string name, string gender, string password, int age, int numberOfChildren, string relationship)
         {
             Name = name;
@@ -23,6 +26,21 @@ namespace Tursit_app_V5.model
             Age = age;
             NumberOfChildren = numberOfChildren;
             Relationship = relationship;
+            Favourites = new ObservableCollection<Picture>();
+        }
+
+        public Boolean AddFavourite(Picture picture)
+        {
+            if (Favourites.Contains(picture)) return false;
+            Favourites.Add(picture);
+            return true;
+        }
+
+        public Boolean RemoveFavourite(Picture picture)
+        {
+            if (!Favourites.Contains(picture)) return false;
+            Favourites.Remove(picture);
+            return true;
         }
 
         public override string ToString()

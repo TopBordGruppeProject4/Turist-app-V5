@@ -10,7 +10,7 @@ namespace Tursit_app_V5.viewmodel
 {
     class Singleton
     {
-        private static Singleton instance = null;
+        private static Singleton _instance = null;
 
         public MainViewModel ViewModel;
         public Userlist UserList;
@@ -23,7 +23,7 @@ namespace Tursit_app_V5.viewmodel
 
         public static Singleton Instance
         {
-            get { return instance ?? (instance = new Singleton()); }
+            get { return _instance ?? (_instance = new Singleton()); }
         }
 
         private ObservableCollection<User> getUserData()

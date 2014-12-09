@@ -13,9 +13,9 @@ namespace Tursit_app_V5.model
 
         public User CurrentUser = null;
 
-        public Userlist(ObservableCollection<User> lisOfUsers)
+        public Userlist(ObservableCollection<User> listOfUsers)
         {
-            ListOfUsers = lisOfUsers;
+            ListOfUsers = listOfUsers;
         }
 
         public Boolean Check(string name, string password)
