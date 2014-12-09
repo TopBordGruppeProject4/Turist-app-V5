@@ -16,13 +16,13 @@ namespace Tursit_app_V5.model
         public Gallery(string name, string picture, ObservableCollection<Picture> pictureCollection)
         {
             Name = name;
-            Picture = picture;
+            Photo = picture;
             PictureCollection = pictureCollection;
         }
 
         public override string ToString()
         {
-            return string.Format("Name: {0}, Picture: {1}, PictureCollection: {2}", Name, Picture, PictureCollection);
+            return string.Format("Name: {0}, Picture: {1}, PictureCollection: {2}", Name, Photo, PictureCollection);
         }
     }
 }
