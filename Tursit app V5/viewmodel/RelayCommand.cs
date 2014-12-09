@@ -3,16 +3,9 @@ using System.Windows.Input;
 
 namespace Tursit_app_V5.viewmodel
 {
-    /// <summary>
-    /// A command whose sole purpose is to relay its functionality 
-    /// to other objects by invoking delegates. 
-    /// The default return value for the CanExecute method is 'true'.
-    /// <see cref="RaiseCanExecuteChanged"/> needs to be called whenever
-    /// <see cref="CanExecute"/> is expected to return a different value.
-    /// </summary>
-    public class RelayCommand : ICommand
+    class RelayCommand<T>: ICommand
     {
-        private readonly Action _execute;
+        private readonly Action<T> _execute;
         private readonly Func<bool> _canExecute;
 
         /// <summary>
@@ -24,7 +17,7 @@ namespace Tursit_app_V5.viewmodel
         /// Creates a new command that can always execute.
         /// </summary>
         /// <param name="execute">The execution logic.</param>
-        public RelayCommand(Action execute)
+        public RelayCommand(Action<T> execute)
             : this(execute, null)
         {
         }
@@ -34,7 +27,7 @@ namespace Tursit_app_V5.viewmodel
         /// </summary>
         /// <param name="execute">The execution logic.</param>
         /// <param name="canExecute">The execution status logic.</param>
-        public RelayCommand(Action execute, Func<bool> canExecute)
+        public RelayCommand(Action<T> execute, Func<bool> canExecute)
         {
             if (execute == null)
                 throw new ArgumentNullException("execute");
@@ -62,7 +55,7 @@ namespace Tursit_app_V5.viewmodel
         /// </param>
         public void Execute(object parameter)
         {
-            _execute();
+            _execute((T)parameter);
         }
 
         /// <summary>
@@ -79,4 +72,5 @@ namespace Tursit_app_V5.viewmodel
             }
         }
     }
+   
 }

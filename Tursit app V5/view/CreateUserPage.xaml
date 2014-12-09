@@ -46,5 +46,26 @@
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
+        <TextBox x:Name="Username_TextBlock" HorizontalAlignment="Left" Margin="40,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Indtast brugernavn"/>
+        <ComboBox x:Name="UserGender_ComboBox" HorizontalAlignment="Left" Margin="40,126,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" PlaceholderText="Vælg køn">
+            <x:String>Mand</x:String>
+            <x:String>Kvinde</x:String>
+        </ComboBox>
+        <PasswordBox x:Name="UserPassword_PasswordBox" HorizontalAlignment="Left" Margin="40,77,0,0" Grid.Row="1" VerticalAlignment="Top" PlaceholderText="Indtast adgangskode"/>
+        <ComboBox x:Name="UserChildren_ComboBox" HorizontalAlignment="Left" Margin="40,174,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" PlaceholderText="Vælg antal børn">
+            <x:Int32>0</x:Int32>
+            <x:Int32>1</x:Int32>
+            <x:Int32>2</x:Int32>
+            <x:Int32>3</x:Int32>
+            <x:Int32>4</x:Int32>
+            <x:Int32>5</x:Int32>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Margin="40,222,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Indtast alder"/>
+        <ComboBox HorizontalAlignment="Left" Margin="40,270,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" PlaceholderText="Vælg forhold">
+            <x:String>Single</x:String>
+            <x:String>I forhold</x:String>
+            <x:String>Gift</x:String>
+        </ComboBox>
+        <Button x:Name="CreateUser_Button" Content="Opret bruger" HorizontalAlignment="Left" Margin="37,317,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Page>
