@@ -29,13 +29,9 @@ namespace Tursit_app_V5.view
                 Userlist userlist = MainViewModel.Userlist;
                 if (userlist.Check(username, password))
                 {
-                    userlist.Check(username, password);
-                    this.Frame.Navigate(typeof (GalleryPage));
+                    this.Frame.Navigate(typeof(GalleryPage));
                 }
-                else
-                {
-                    LoginErrorTextBlock.Text = "Bruger informationerne er forkert...";
-                }
+                LoginErrorTextBlock.Text = "Bruger informationerne er forkert...";
             }
             else
             {

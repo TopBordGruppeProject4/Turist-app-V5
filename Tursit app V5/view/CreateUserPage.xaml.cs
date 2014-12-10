@@ -126,12 +126,12 @@ namespace Tursit_app_V5.view
         {
             try
             {
-                string username = Username_TextBlock.Text;
-                string gender = UserGender_ComboBox.SelectedValue.ToString();
-                string password = UserPassword_PasswordBox.Password;
+                string username     = Username_TextBlock.Text;
+                string gender       = UserGender_ComboBox.SelectedValue.ToString();
+                string password     = UserPassword_PasswordBox.Password;
                 DateTimeOffset date = UserAge_DatePicker.Date;
                 string datefomatted = date.Day + "/" + date.Month + "-" + date.Year;
-                int childrens = (int) userChildren.SelectedValue;
+                int childrens       = (int) userChildren.SelectedValue;
                 string relationship = UserRelationship_ComboBox.SelectedValue.ToString();
 
                 MainViewModel.Userlist.CreateUser(username, gender, password, date, childrens, relationship);
