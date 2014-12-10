@@ -132,19 +132,40 @@ namespace Tursit_app_V5.view
                 string gender       = UserGender_ComboBox.SelectedValue.ToString();
                 string password     = UserPassword_PasswordBox.Password;
                 DateTimeOffset date = UserAge_DatePicker.Date;
-                string datefomatted = date.Day + "/" + date.Month + "-" + date.Year;
                 int childrens       = (int) userChildren.SelectedValue;
                 string relationship = UserRelationship_ComboBox.SelectedValue.ToString();
 
-                MainViewModel.Userlist.CreateUser(username, gender, password, date, childrens, relationship);
-                FileHandler.Save(MainViewModel.Userlist.ListOfUsers);
-                userinfo_textblock.Text = "Bruger oprettet.";
+                if (date <= DateTimeOffset.Now)
+                {
+                    if (MainViewModel.Userlist.CreateUser(username, gender, password, date, childrens, relationship))
+                    {
+                        MainViewModel.Userlist.CreateUser(username, gender, password, date, childrens, relationship);
+                        FileHandler.Save(MainViewModel.Userlist.ListOfUsers);
 
-                userListView.ItemsSource = MainViewModel.Userlist.ListOfUsers;
+                        UserSuccessTextBlock.Text = "Brugeren er blevet oprettet ☺";
+                        UserErrorTextBlock.Visibility = Visibility.Collapsed;
+                        UserSuccessTextBlock.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        UserErrorTextBlock.Text = "Der findes en bruger med det brugernavn i forvejen, beklager...";
+                        UserSuccessTextBlock.Visibility = Visibility.Collapsed;
+                        UserErrorTextBlock.Visibility = Visibility.Visible;
+                    }
+                }
+                else
+                {
+                    UserErrorTextBlock.Text = "Tror du, at du er fra fremtiden eller hva?";
+                    UserSuccessTextBlock.Visibility = Visibility.Collapsed;
+                    UserErrorTextBlock.Visibility = Visibility.Visible;
+                }
+                
             }
             catch (Exception)
             {
-                userinfo_textblock.Text = "Der opstod en fejl, beklager... Har du husket at vælge noget i alle dropdown menuerne?";
+                UserErrorTextBlock.Text = "Der opstod en fejl... Har du husket at udfylde alle felterne korrekt?";
+                UserSuccessTextBlock.Visibility = Visibility.Collapsed;
+                UserErrorTextBlock.Visibility = Visibility.Visible;
             }
             
         }

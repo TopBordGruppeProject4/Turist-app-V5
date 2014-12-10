@@ -19,22 +19,22 @@ namespace TursitAppV4.Model
 
         public static async void Save(ObservableCollection<User> users)
         {
-            string playerDataAsJson = JsonConvert.SerializeObject(users);
-            SerializeSaveGameAsync(playerDataAsJson, FileName);
+            string userData = JsonConvert.SerializeObject(users);
+            SerializeSaveGameAsync(userData, FileName);
         }
 
-        public static async void SerializeSaveGameAsync(string playerDataJsonString, string fileName)
+        public static async void SerializeSaveGameAsync(string userDataJsonString, string fileName)
         {
             StorageFile localFile = await ApplicationData.Current.LocalFolder.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
-            await FileIO.WriteTextAsync(localFile, playerDataJsonString);
+            await FileIO.WriteTextAsync(localFile, userDataJsonString);
         }
 
         public static async Task<ObservableCollection<User>> Load()
         {
-            string favoritData = await DeserializeFavoritAsync(FileName);
-            if (favoritData != null)
+            string usersData = await DeserializeFavoritAsync(FileName);
+            if (usersData != null)
             {
-                return (ObservableCollection<User>)JsonConvert.DeserializeObject(favoritData, typeof(ObservableCollection<User>));
+                return (ObservableCollection<User>)JsonConvert.DeserializeObject(usersData, typeof(ObservableCollection<User>));
             }
             return null;
         }

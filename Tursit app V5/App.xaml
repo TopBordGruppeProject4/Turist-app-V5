@@ -17,7 +17,16 @@
             <Setter Property="VerticalAlignment" Value="Top"/>
         </Style>
         <Style TargetType="TextBlock" x:Name="TextBlockErrorStyle">
-            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="Foreground" Value="#450000"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Name="TextBlockSuccessStyle">
+            <Setter Property="Foreground" Value="#006600"/>
+        </Style>
+        <Style TargetType="Grid" x:Name="AppBackgroundStyle">
+            <Setter Property="Background" Value="SaddleBrown"/>
+        </Style>
+        <Style TargetType="ComboBox" x:Name="ComboBoxFormStyle">
+            <Setter Property="Width" Value="150"></Setter>
         </Style>
     </Application.Resources>
 
