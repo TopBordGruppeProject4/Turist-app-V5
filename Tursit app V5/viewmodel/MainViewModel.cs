@@ -11,6 +11,9 @@ namespace Tursit_app_V5.viewmodel
 {
     class MainViewModel
     {
+        private static Userlist _userlist = Userlist.UserlistInstance;
+
+        public static Userlist Userlist { get { return _userlist; } }
 
         public Picture SelectedPicture { get; set; }
         public Gallery SelectedGallery { get; set; }

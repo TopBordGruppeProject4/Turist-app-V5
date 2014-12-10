@@ -1,14 +1,17 @@
 ﻿<Page
     x:Name="pageRoot"
-    x:Class="Tursit_app_V5.view.BasicPage1"
-    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    x:Class="Tursit_app_V5.view.CreateUserPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Tursit_app_V5.view"
     xmlns:common="using:Tursit_app_V5.Common"
+    xmlns:viewmodel="using:Tursit_app_V5.viewmodel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <viewmodel:CommandHandler></viewmodel:CommandHandler>
+    </Page.DataContext>
 
     <Page.Resources>
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
@@ -46,26 +49,14 @@
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
-        <TextBox x:Name="Username_TextBlock" HorizontalAlignment="Left" Margin="40,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Indtast brugernavn"/>
-        <ComboBox x:Name="UserGender_ComboBox" HorizontalAlignment="Left" Margin="40,126,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" PlaceholderText="Vælg køn">
-            <x:String>Mand</x:String>
-            <x:String>Kvinde</x:String>
-        </ComboBox>
-        <PasswordBox x:Name="UserPassword_PasswordBox" HorizontalAlignment="Left" Margin="40,77,0,0" Grid.Row="1" VerticalAlignment="Top" PlaceholderText="Indtast adgangskode"/>
-        <ComboBox x:Name="UserChildren_ComboBox" HorizontalAlignment="Left" Margin="40,174,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" PlaceholderText="Vælg antal børn">
-            <x:Int32>0</x:Int32>
-            <x:Int32>1</x:Int32>
-            <x:Int32>2</x:Int32>
-            <x:Int32>3</x:Int32>
-            <x:Int32>4</x:Int32>
-            <x:Int32>5</x:Int32>
-        </ComboBox>
-        <TextBox HorizontalAlignment="Left" Margin="40,222,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" PlaceholderText="Indtast alder"/>
-        <ComboBox HorizontalAlignment="Left" Margin="40,270,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" PlaceholderText="Vælg forhold">
-            <x:String>Single</x:String>
-            <x:String>I forhold</x:String>
-            <x:String>Gift</x:String>
-        </ComboBox>
-        <Button x:Name="CreateUser_Button" Content="Opret bruger" HorizontalAlignment="Left" Margin="37,317,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBox x:Name="Username_TextBlock" Style="{StaticResource TextboxFormStyle}" Margin="40,27,0,0" Grid.Row="1" TextWrapping="Wrap" PlaceholderText="Indtast brugernavn"/>
+        <PasswordBox x:Name="UserPassword_PasswordBox" Style="{StaticResource PasswordboxFormStyle}" Margin="40,77,0,0" Grid.Row="1" PlaceholderText="Indtast adgangskode"/>
+        <DatePicker x:Name="UserAge_DatePicker" HorizontalAlignment="Left" Margin="40,134,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <ComboBox x:Name="userChildren" HorizontalAlignment="Left" Margin="40,186,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" PlaceholderText="Vælg antal børn"/>
+        <ComboBox x:Name="UserGender_ComboBox" HorizontalAlignment="Left" Margin="40,230,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" PlaceholderText="Vælg køn"/>
+        <ComboBox x:Name="UserRelationship_ComboBox" HorizontalAlignment="Left" Margin="40,281,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" PlaceholderText="Vælg forhold"/>
+        <Button x:Name="CreateUser_Button" Content="Opret bruger" HorizontalAlignment="Left" Margin="37,320,0,0" Grid.Row="1" VerticalAlignment="Top" Click="CreateUser_Button_Click"/>
+        <TextBlock x:Name="userinfo_textblock" HorizontalAlignment="Left" Margin="737,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <ListView x:Name="userListView" HorizontalAlignment="Left" Height="500" Margin="737,118,0,0" Grid.Row="1" VerticalAlignment="Top" Width="596"/>
     </Grid>
 </Page>

@@ -30,7 +30,7 @@ namespace Tursit_app_V5.viewmodel
         public void CreateUserCommand(User user)
         {
             Userlist userlist = Userlist.UserlistInstance;
-            userlist.CreateUser(user.Name, user.Gender, user.Password, user.Age, user.NumberOfChildren,
+            userlist.CreateUser(user.Name, user.Gender, user.Password, user.Birthday, user.NumberOfChildren,
                 user.Relationship);
         }
 

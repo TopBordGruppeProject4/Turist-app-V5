@@ -14,9 +14,9 @@ namespace Tursit_app_V5.model
         private Userlist()
         {
             ListOfUsers = new ObservableCollection<User>();
-            ListOfUsers.Add(new User("Søren", "Male", "1234", 32, 2, "Married"));
-            ListOfUsers.Add(new User("Malene", "Female", "1234", 25, 0, "Single"));
-            ListOfUsers.Add(new User("Karen", "Female", "1234", 56, 2, "Divorced"));
+            ListOfUsers.Add(new User("Søren", "Mand", "1234", DateTimeOffset.Parse("08/21/1963"), 2, "Married"));
+            ListOfUsers.Add(new User("Malene", "Kvinde", "1234", DateTimeOffset.Parse("05/19/1983"), 0, "Single"));
+            ListOfUsers.Add(new User("Karen", "Kvinde", "1234", DateTimeOffset.Parse("11/05/1978"), 2, "Divorced"));
         }
 
         public static Userlist UserlistInstance
@@ -48,10 +48,10 @@ namespace Tursit_app_V5.model
             return false;
         }
 
-        public Boolean CreateUser(string name, string gender, string password, int age, int numberOfChildren, string relationship)
+        public Boolean CreateUser(string name, string gender, string password, DateTimeOffset date, int numberOfChildren, string relationship)
         {
             if (ListOfUsers.Any(user => user.Name.Equals(name))) return false;
-            ListOfUsers.Add(new User(name, gender, password, age, numberOfChildren, relationship));
+            ListOfUsers.Add(new User(name, gender, password, date, numberOfChildren, relationship));
             return true;
         }
 

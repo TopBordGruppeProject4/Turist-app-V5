@@ -16,13 +16,14 @@ using Windows.UI.Xaml.Navigation;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 using Tursit_app_V5.model;
+using Tursit_app_V5.viewmodel;
 
 namespace Tursit_app_V5.view
 {
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class BasicPage1 : Page
+    public sealed partial class CreateUserPage : Page
     {
 
         private NavigationHelper navigationHelper;
@@ -46,12 +47,29 @@ namespace Tursit_app_V5.view
         }
 
 
-        public BasicPage1()
+        public CreateUserPage()
         {
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
+
+            for (int i = 0; i < 5; i++)
+            {
+                userChildren.Items.Add(i);
+            }
+
+            List<string> genders = new List<string>(){"Mand", "Kvinde"};
+            foreach (var gender in genders)
+            {
+                UserGender_ComboBox.Items.Add(gender);
+            }
+
+            List<string> relationships = new List<string>(){"Single", "I forhold", "Gift"};
+            foreach (var relationship in relationships)
+            {
+                UserRelationship_ComboBox.Items.Add(relationship);
+            }
         }
 
         /// <summary>
@@ -103,5 +121,29 @@ namespace Tursit_app_V5.view
         }
 
         #endregion
+
+        private void CreateUser_Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string username = Username_TextBlock.Text;
+                string gender = UserGender_ComboBox.SelectedValue.ToString();
+                string password = UserPassword_PasswordBox.Password;
+                DateTimeOffset date = UserAge_DatePicker.Date;
+                string datefomatted = date.Day + "/" + date.Month + "-" + date.Year;
+                int childrens = (int) userChildren.SelectedValue;
+                string relationship = UserRelationship_ComboBox.SelectedValue.ToString();
+
+                MainViewModel.Userlist.CreateUser(username, gender, password, date, childrens, relationship);
+
+                userinfo_textblock.Text = "Bruger oprettet.";
+                userListView.ItemsSource = MainViewModel.Userlist.ListOfUsers;
+            }
+            catch (Exception)
+            {
+                userinfo_textblock.Text = "Der opstod en fejl, beklager... Har du husket at vælge noget i alle dropdown menuerne?";
+            }
+            
+        }
     }
 }
