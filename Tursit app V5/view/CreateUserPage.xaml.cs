@@ -1,4 +1,5 @@
-﻿using Tursit_app_V5.Common;
+﻿using TursitAppV4.Model;
+using Tursit_app_V5.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -54,9 +55,10 @@ namespace Tursit_app_V5.view
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
 
-            for (int i = 0; i < 5; i++)
+            List<int> childrenChoises = new List<int>(){0, 1, 2, 3, 4, 5};
+            foreach (var childrenChoise in childrenChoises)
             {
-                userChildren.Items.Add(i);
+                userChildren.Items.Add(childrenChoise);
             }
 
             List<string> genders = new List<string>(){"Mand", "Kvinde"};
@@ -135,8 +137,9 @@ namespace Tursit_app_V5.view
                 string relationship = UserRelationship_ComboBox.SelectedValue.ToString();
 
                 MainViewModel.Userlist.CreateUser(username, gender, password, date, childrens, relationship);
-
+                FileHandler.Save(MainViewModel.Userlist.ListOfUsers);
                 userinfo_textblock.Text = "Bruger oprettet.";
+
                 userListView.ItemsSource = MainViewModel.Userlist.ListOfUsers;
             }
             catch (Exception)

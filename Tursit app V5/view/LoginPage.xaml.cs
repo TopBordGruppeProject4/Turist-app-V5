@@ -1,5 +1,6 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 using Windows.UI.Xaml.Controls;
+using TursitAppV4.Model;
 using Tursit_app_V5.model;
 using Tursit_app_V5.viewmodel;
 
@@ -13,6 +14,9 @@ namespace Tursit_app_V5.view
         public MainPage()
         {
             this.InitializeComponent();
+
+            // Loads saved users, if they exists
+            LoadUsers();
         }
 
         private void CreateUserButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
@@ -36,6 +40,15 @@ namespace Tursit_app_V5.view
             else
             {
                 LoginErrorTextBlock.Text = "Du skal udfylde felterne...";
+            }
+        }
+
+        private async void LoadUsers()
+        {
+            var loadedUsers = await FileHandler.Load();
+            if (loadedUsers != null)
+            {
+                MainViewModel.Userlist.ListOfUsers = loadedUsers;
             }
         }
     }

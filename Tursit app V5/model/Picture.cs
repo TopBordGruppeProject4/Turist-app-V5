@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tursit_app_V5.model
 {
-    class Picture
+    public class Picture
     {
         public string Name { get; set; }
         public string Photo { get; set; }

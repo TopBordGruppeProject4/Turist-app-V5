@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tursit_app_V5.model
 {
-    class User
+    public class User
     {
         public string Name { get; set; }
         public string Gender { get; set; }
