@@ -30,8 +30,8 @@ namespace Tursit_app_V5.view
             string password = UserPasswordBox.Password;
             if (username != "" && password != "")
             {
-                Userlist userlist = MainViewModel.Userlist;
-                if (userlist.Check(username, password))
+                CommandHandler commandHandler = new CommandHandler();
+                if (commandHandler.LoginCommand(username, password))
                 {
                     this.Frame.Navigate(typeof(GalleryPage));
                 }

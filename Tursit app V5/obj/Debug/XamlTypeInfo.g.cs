@@ -224,7 +224,7 @@ namespace Tursit_app_V5.Tursit_app_V5_XamlTypeInfo
             case 0:   //  Tursit_app_V5.viewmodel.CommandHandler
                 userType = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_0_CommandHandler;
-                userType.AddMemberName("UserCommand");
+                userType.AddMemberName("CreateUserRelayCommand");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -340,15 +340,15 @@ namespace Tursit_app_V5.Tursit_app_V5_XamlTypeInfo
         }
 
 
-        private object get_0_CommandHandler_UserCommand(object instance)
+        private object get_0_CommandHandler_CreateUserRelayCommand(object instance)
         {
             var that = (global::Tursit_app_V5.viewmodel.CommandHandler)instance;
-            return that.UserCommand;
+            return that.CreateUserRelayCommand;
         }
-        private void set_0_CommandHandler_UserCommand(object instance, object Value)
+        private void set_0_CommandHandler_CreateUserRelayCommand(object instance, object Value)
         {
             var that = (global::Tursit_app_V5.viewmodel.CommandHandler)instance;
-            that.UserCommand = (global::System.Windows.Input.ICommand)Value;
+            that.CreateUserRelayCommand = (global::System.Windows.Input.ICommand)Value;
         }
         private object get_1_CreateUserPage_DefaultViewModel(object instance)
         {
@@ -418,11 +418,11 @@ namespace Tursit_app_V5.Tursit_app_V5_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "Tursit_app_V5.viewmodel.CommandHandler.UserCommand":
+            case "Tursit_app_V5.viewmodel.CommandHandler.CreateUserRelayCommand":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.viewmodel.CommandHandler");
-                xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "UserCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_0_CommandHandler_UserCommand;
-                xamlMember.Setter = set_0_CommandHandler_UserCommand;
+                xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "CreateUserRelayCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_0_CommandHandler_CreateUserRelayCommand;
+                xamlMember.Setter = set_0_CommandHandler_CreateUserRelayCommand;
                 break;
             case "Tursit_app_V5.view.CreateUserPage.DefaultViewModel":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.view.CreateUserPage");

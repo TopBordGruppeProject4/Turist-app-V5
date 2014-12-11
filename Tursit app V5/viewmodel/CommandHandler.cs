@@ -14,7 +14,7 @@ namespace Tursit_app_V5.viewmodel
     {
         private ICommand _userCommand;
 
-        public ICommand UserCommand
+        public ICommand CreateUserRelayCommand
         {
             get
             {
@@ -39,9 +39,14 @@ namespace Tursit_app_V5.viewmodel
             return false;
         }
 
-        public bool LoginCommand()
+        public bool LoginCommand(string username, string password)
         {
-            
+            Userlist userlist = Userlist.UserlistInstance;
+            if (userlist.Check(username, password))
+            {
+                return true;
+            }
+            return false;
         }
 
     }
