@@ -135,11 +135,12 @@ namespace Tursit_app_V5.view
                 int childrens       = (int) userChildren.SelectedValue;
                 string relationship = UserRelationship_ComboBox.SelectedValue.ToString();
 
+                CommandHandler commandHandler  = new CommandHandler();
+
                 if (date <= DateTimeOffset.Now)
                 {
-                    if (MainViewModel.Userlist.CreateUser(username, gender, password, date, childrens, relationship))
+                    if (commandHandler.CreateUserCommand(new User(username, gender, password, date, childrens, relationship)))
                     {
-                        MainViewModel.Userlist.CreateUser(username, gender, password, date, childrens, relationship);
                         FileHandler.Save(MainViewModel.Userlist.ListOfUsers);
 
                         UserSuccessTextBlock.Text = "Brugeren er blevet oprettet ☺";
@@ -148,26 +149,27 @@ namespace Tursit_app_V5.view
                     }
                     else
                     {
-                        UserErrorTextBlock.Text = "Der findes en bruger med det brugernavn i forvejen, beklager...";
-                        UserSuccessTextBlock.Visibility = Visibility.Collapsed;
-                        UserErrorTextBlock.Visibility = Visibility.Visible;
+                        UserErrorMessage("Der findes en bruger med det brugernavn i forvejen, beklager...");
                     }
                 }
                 else
                 {
-                    UserErrorTextBlock.Text = "Tror du, at du er fra fremtiden eller hva?";
-                    UserSuccessTextBlock.Visibility = Visibility.Collapsed;
-                    UserErrorTextBlock.Visibility = Visibility.Visible;
+                    UserErrorMessage("Tror du, at du er fra fremtiden eller hva?");
                 }
                 
             }
             catch (Exception)
             {
-                UserErrorTextBlock.Text = "Der opstod en fejl... Har du husket at udfylde alle felterne korrekt?";
-                UserSuccessTextBlock.Visibility = Visibility.Collapsed;
-                UserErrorTextBlock.Visibility = Visibility.Visible;
+                UserErrorMessage("Der opstod en fejl... Har du husket at udfylde alle felterne korrekt?");
             }
             
+        }
+
+        private void UserErrorMessage(string message)
+        {
+            UserErrorTextBlock.Text = message;
+            UserSuccessTextBlock.Visibility = Visibility.Collapsed;
+            UserErrorTextBlock.Visibility = Visibility.Visible;
         }
     }
 }

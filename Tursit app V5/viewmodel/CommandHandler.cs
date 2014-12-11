@@ -27,14 +27,19 @@ namespace Tursit_app_V5.viewmodel
             set { _userCommand = value; }
         }
 
-        public void CreateUserCommand(User user)
+        public bool CreateUserCommand(User user)
         {
             Userlist userlist = Userlist.UserlistInstance;
-            userlist.CreateUser(user.Name, user.Gender, user.Password, user.Birthday, user.NumberOfChildren,
-                user.Relationship);
+            if (userlist.CreateUser(user.Name, user.Gender, user.Password, user.Birthday, user.NumberOfChildren,
+                user.Relationship))
+            {
+                return true;
+            }
+            
+            return false;
         }
 
-        public void LoginCommand()
+        public bool LoginCommand()
         {
             
         }

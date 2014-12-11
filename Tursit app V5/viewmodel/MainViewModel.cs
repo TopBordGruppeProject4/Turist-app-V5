@@ -17,5 +17,7 @@ namespace Tursit_app_V5.viewmodel
 
         public Picture SelectedPicture { get; set; }
         public Gallery SelectedGallery { get; set; }
+
+
     }
 }
