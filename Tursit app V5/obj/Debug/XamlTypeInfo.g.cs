@@ -224,7 +224,8 @@ namespace Tursit_app_V5.Tursit_app_V5_XamlTypeInfo
             case 0:   //  Tursit_app_V5.viewmodel.CommandHandler
                 userType = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_0_CommandHandler;
-                userType.AddMemberName("CreateUserRelayCommand");
+                userType.AddMemberName("AddUserFavoritesCommand");
+                userType.AddMemberName("RemoveUserFavoriteCommand");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -340,72 +341,82 @@ namespace Tursit_app_V5.Tursit_app_V5_XamlTypeInfo
         }
 
 
-        private object get_0_CommandHandler_CreateUserRelayCommand(object instance)
+        private object get_0_CommandHandler_AddUserFavoritesCommand(object instance)
         {
             var that = (global::Tursit_app_V5.viewmodel.CommandHandler)instance;
-            return that.CreateUserRelayCommand;
+            return that.AddUserFavoritesCommand;
         }
-        private void set_0_CommandHandler_CreateUserRelayCommand(object instance, object Value)
+        private void set_0_CommandHandler_AddUserFavoritesCommand(object instance, object Value)
         {
             var that = (global::Tursit_app_V5.viewmodel.CommandHandler)instance;
-            that.CreateUserRelayCommand = (global::System.Windows.Input.ICommand)Value;
+            that.AddUserFavoritesCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_1_CreateUserPage_DefaultViewModel(object instance)
+        private object get_1_CommandHandler_RemoveUserFavoriteCommand(object instance)
+        {
+            var that = (global::Tursit_app_V5.viewmodel.CommandHandler)instance;
+            return that.RemoveUserFavoriteCommand;
+        }
+        private void set_1_CommandHandler_RemoveUserFavoriteCommand(object instance, object Value)
+        {
+            var that = (global::Tursit_app_V5.viewmodel.CommandHandler)instance;
+            that.RemoveUserFavoriteCommand = (global::System.Windows.Input.ICommand)Value;
+        }
+        private object get_2_CreateUserPage_DefaultViewModel(object instance)
         {
             var that = (global::Tursit_app_V5.view.CreateUserPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_2_CreateUserPage_NavigationHelper(object instance)
+        private object get_3_CreateUserPage_NavigationHelper(object instance)
         {
             var that = (global::Tursit_app_V5.view.CreateUserPage)instance;
             return that.NavigationHelper;
         }
-        private object get_3_MainViewModel_SelectedPicture(object instance)
+        private object get_4_MainViewModel_SelectedPicture(object instance)
         {
             var that = (global::Tursit_app_V5.viewmodel.MainViewModel)instance;
             return that.SelectedPicture;
         }
-        private void set_3_MainViewModel_SelectedPicture(object instance, object Value)
+        private void set_4_MainViewModel_SelectedPicture(object instance, object Value)
         {
             var that = (global::Tursit_app_V5.viewmodel.MainViewModel)instance;
             that.SelectedPicture = (global::Tursit_app_V5.model.Picture)Value;
         }
-        private object get_4_MainViewModel_SelectedGallery(object instance)
+        private object get_5_MainViewModel_SelectedGallery(object instance)
         {
             var that = (global::Tursit_app_V5.viewmodel.MainViewModel)instance;
             return that.SelectedGallery;
         }
-        private void set_4_MainViewModel_SelectedGallery(object instance, object Value)
+        private void set_5_MainViewModel_SelectedGallery(object instance, object Value)
         {
             var that = (global::Tursit_app_V5.viewmodel.MainViewModel)instance;
             that.SelectedGallery = (global::Tursit_app_V5.model.Gallery)Value;
         }
-        private object get_5_DescriptionPage_DefaultViewModel(object instance)
+        private object get_6_DescriptionPage_DefaultViewModel(object instance)
         {
             var that = (global::Tursit_app_V5.view.DescriptionPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_6_DescriptionPage_NavigationHelper(object instance)
+        private object get_7_DescriptionPage_NavigationHelper(object instance)
         {
             var that = (global::Tursit_app_V5.view.DescriptionPage)instance;
             return that.NavigationHelper;
         }
-        private object get_7_GalleryPage_DefaultViewModel(object instance)
+        private object get_8_GalleryPage_DefaultViewModel(object instance)
         {
             var that = (global::Tursit_app_V5.view.GalleryPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_8_GalleryPage_NavigationHelper(object instance)
+        private object get_9_GalleryPage_NavigationHelper(object instance)
         {
             var that = (global::Tursit_app_V5.view.GalleryPage)instance;
             return that.NavigationHelper;
         }
-        private object get_9_PicturePage_DefaultViewModel(object instance)
+        private object get_10_PicturePage_DefaultViewModel(object instance)
         {
             var that = (global::Tursit_app_V5.view.PicturePage)instance;
             return that.DefaultViewModel;
         }
-        private object get_10_PicturePage_NavigationHelper(object instance)
+        private object get_11_PicturePage_NavigationHelper(object instance)
         {
             var that = (global::Tursit_app_V5.view.PicturePage)instance;
             return that.NavigationHelper;
@@ -418,70 +429,76 @@ namespace Tursit_app_V5.Tursit_app_V5_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "Tursit_app_V5.viewmodel.CommandHandler.CreateUserRelayCommand":
+            case "Tursit_app_V5.viewmodel.CommandHandler.AddUserFavoritesCommand":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.viewmodel.CommandHandler");
-                xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "CreateUserRelayCommand", "System.Windows.Input.ICommand");
-                xamlMember.Getter = get_0_CommandHandler_CreateUserRelayCommand;
-                xamlMember.Setter = set_0_CommandHandler_CreateUserRelayCommand;
+                xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "AddUserFavoritesCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_0_CommandHandler_AddUserFavoritesCommand;
+                xamlMember.Setter = set_0_CommandHandler_AddUserFavoritesCommand;
+                break;
+            case "Tursit_app_V5.viewmodel.CommandHandler.RemoveUserFavoriteCommand":
+                userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.viewmodel.CommandHandler");
+                xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "RemoveUserFavoriteCommand", "System.Windows.Input.ICommand");
+                xamlMember.Getter = get_1_CommandHandler_RemoveUserFavoriteCommand;
+                xamlMember.Setter = set_1_CommandHandler_RemoveUserFavoriteCommand;
                 break;
             case "Tursit_app_V5.view.CreateUserPage.DefaultViewModel":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.view.CreateUserPage");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Tursit_app_V5.Common.ObservableDictionary");
-                xamlMember.Getter = get_1_CreateUserPage_DefaultViewModel;
+                xamlMember.Getter = get_2_CreateUserPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Tursit_app_V5.view.CreateUserPage.NavigationHelper":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.view.CreateUserPage");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Tursit_app_V5.Common.NavigationHelper");
-                xamlMember.Getter = get_2_CreateUserPage_NavigationHelper;
+                xamlMember.Getter = get_3_CreateUserPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Tursit_app_V5.viewmodel.MainViewModel.SelectedPicture":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.viewmodel.MainViewModel");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "SelectedPicture", "Tursit_app_V5.model.Picture");
-                xamlMember.Getter = get_3_MainViewModel_SelectedPicture;
-                xamlMember.Setter = set_3_MainViewModel_SelectedPicture;
+                xamlMember.Getter = get_4_MainViewModel_SelectedPicture;
+                xamlMember.Setter = set_4_MainViewModel_SelectedPicture;
                 break;
             case "Tursit_app_V5.viewmodel.MainViewModel.SelectedGallery":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.viewmodel.MainViewModel");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "SelectedGallery", "Tursit_app_V5.model.Gallery");
-                xamlMember.Getter = get_4_MainViewModel_SelectedGallery;
-                xamlMember.Setter = set_4_MainViewModel_SelectedGallery;
+                xamlMember.Getter = get_5_MainViewModel_SelectedGallery;
+                xamlMember.Setter = set_5_MainViewModel_SelectedGallery;
                 break;
             case "Tursit_app_V5.view.DescriptionPage.DefaultViewModel":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.view.DescriptionPage");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Tursit_app_V5.Common.ObservableDictionary");
-                xamlMember.Getter = get_5_DescriptionPage_DefaultViewModel;
+                xamlMember.Getter = get_6_DescriptionPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Tursit_app_V5.view.DescriptionPage.NavigationHelper":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.view.DescriptionPage");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Tursit_app_V5.Common.NavigationHelper");
-                xamlMember.Getter = get_6_DescriptionPage_NavigationHelper;
+                xamlMember.Getter = get_7_DescriptionPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Tursit_app_V5.view.GalleryPage.DefaultViewModel":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.view.GalleryPage");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Tursit_app_V5.Common.ObservableDictionary");
-                xamlMember.Getter = get_7_GalleryPage_DefaultViewModel;
+                xamlMember.Getter = get_8_GalleryPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Tursit_app_V5.view.GalleryPage.NavigationHelper":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.view.GalleryPage");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Tursit_app_V5.Common.NavigationHelper");
-                xamlMember.Getter = get_8_GalleryPage_NavigationHelper;
+                xamlMember.Getter = get_9_GalleryPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Tursit_app_V5.view.PicturePage.DefaultViewModel":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.view.PicturePage");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Tursit_app_V5.Common.ObservableDictionary");
-                xamlMember.Getter = get_9_PicturePage_DefaultViewModel;
+                xamlMember.Getter = get_10_PicturePage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Tursit_app_V5.view.PicturePage.NavigationHelper":
                 userType = (global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Tursit_app_V5.view.PicturePage");
                 xamlMember = new global::Tursit_app_V5.Tursit_app_V5_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Tursit_app_V5.Common.NavigationHelper");
-                xamlMember.Getter = get_10_PicturePage_NavigationHelper;
+                xamlMember.Getter = get_11_PicturePage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             }

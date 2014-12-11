@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+using Tursit_app_V5.model;
 
 namespace Tursit_app_V5.view
 {
@@ -51,6 +52,8 @@ namespace Tursit_app_V5.view
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
+
+            Username.Text = Userlist.UserlistInstance.CurrentUser.Name;
         }
 
         /// <summary>
