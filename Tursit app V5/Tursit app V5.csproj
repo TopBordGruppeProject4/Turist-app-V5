@@ -142,10 +142,28 @@
     <None Include="Tursit app V5_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Boserup.png" />
+    <Content Include="Assets\byparken.png" />
+    <Content Include="Assets\Domkirkeren.png" />
+    <Content Include="Assets\Folkeparken.png" />
+    <Content Include="Assets\Garbos.png" />
+    <Content Include="Assets\Gimle.png" />
+    <Content Include="Assets\Hedeland.png" />
+    <Content Include="Assets\IP.png" />
+    <Content Include="Assets\Kællingehaven.png" />
     <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Mulligans.png" />
+    <Content Include="Assets\Musicon.png" />
+    <Content Include="Assets\Natur.png" />
+    <Content Include="Assets\PARTY.png" />
+    <Content Include="Assets\Roskilde by.png" />
+    <Content Include="Assets\Roskilde Museum.png" />
+    <Content Include="Assets\RosTorv.png" />
+    <Content Include="Assets\Sgetti.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Vikingeskib.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
