@@ -17,6 +17,11 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">Orange oplevelser</x:String>
     </Page.Resources>
+	<Page.TopAppBar>
+		<AppBar>
+			<AppBarButton x:Name="LogoutButton" Icon="Clear" Label="Log ud" Click="LogoutButton_Click"/>
+		</AppBar>
+	</Page.TopAppBar>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -37,23 +42,41 @@
         <!-- Back button and page title -->
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120"/>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="150"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="backButton" Margin="39,59,0,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
-                        Style="{StaticResource NavigationBackButtonNormalStyle}"
-                        VerticalAlignment="Top"
-                        AutomationProperties.Name="Back"
-                        AutomationProperties.AutomationId="BackButton"
-                        AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" Grid.ColumnSpan="2"/>
+            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="0" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Center" Margin="50,0,0,0" HorizontalAlignment="Center"/>
             <TextBlock Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center">
                 <Run Text="Logget ind som:"></Run>
                 <LineBreak></LineBreak>
                 <Run x:Name="Username" Text=""></Run>
             </TextBlock>
         </Grid>
+        <Button x:Name="natureButton" HorizontalAlignment="Left" Margin="50,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="200" Click="natureButton_Click" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Natur.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="restaurentsButton" HorizontalAlignment="Right" Margin="0,0,50,80" Grid.Row="1" VerticalAlignment="Bottom" Width="200" Height="200" Click="restaurentsButton_Click" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Sgetti.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="nightlifeButton" HorizontalAlignment="Left" Margin="50,0,0,50" Grid.Row="1" VerticalAlignment="Bottom" Width="250" Height="200" Click="nightlifeButton_Click" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/PARTY.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="attractionsButton" HorizontalAlignment="Right" Margin="0,80,50,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="200" Click="attractionsButton_Click" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Roskilde by.png"/>
+            </Button.Background>
+        </Button>
+        <Button HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="200" Height="200" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/StoreLogo.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

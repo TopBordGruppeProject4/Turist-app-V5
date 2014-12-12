@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
+using Tursit_app_V5.model;
 using Tursit_app_V5.viewmodel;
 
 namespace Tursit_app_V5.view
@@ -52,6 +53,8 @@ namespace Tursit_app_V5.view
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
+
+            Username.Text = Userlist.UserlistInstance.CurrentUser.Name;
         }
 
         /// <summary>
@@ -103,5 +106,45 @@ namespace Tursit_app_V5.view
         }
 
         #endregion
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[0];
+            ButtonNavigate();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[1];
+            ButtonNavigate();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[2];
+            ButtonNavigate();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[3];
+            ButtonNavigate();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[4];
+            ButtonNavigate();
+        }
+
+        private void ButtonNavigate()
+        {
+            this.Frame.Navigate(typeof (DescriptionPage));
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof (LoginPage));
+        }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Tursit_app_V5.view.MainPage"
+    x:Class="Tursit_app_V5.view.LoginPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Tursit_app_V5"

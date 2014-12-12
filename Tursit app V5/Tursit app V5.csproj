@@ -114,6 +114,7 @@
     <Compile Include="model\Picture.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="model\Userlist.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="viewmodel\CommandHandler.cs" />
     <Compile Include="viewmodel\MainViewModel.cs" />
@@ -149,7 +150,10 @@
     <Content Include="Assets\Garbos.png" />
     <Content Include="Assets\Gimle.png" />
     <Content Include="Assets\Hedeland.png" />
+    <Content Include="Assets\Ilden.png" />
+    <Content Include="Assets\insp.png" />
     <Content Include="Assets\IP.png" />
+    <Content Include="Assets\Kælderen.png" />
     <Content Include="Assets\Kællingehaven.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\Mulligans.png" />
@@ -161,9 +165,12 @@
     <Content Include="Assets\RosTorv.png" />
     <Content Include="Assets\Sgetti.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\Snekken.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Vigen.png" />
     <Content Include="Assets\Vikingeskib.png" />
+    <Content Include="Assets\Wood wall.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

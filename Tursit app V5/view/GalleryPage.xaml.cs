@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 using Tursit_app_V5.model;
+using Tursit_app_V5.viewmodel;
 
 namespace Tursit_app_V5.view
 {
@@ -105,5 +106,39 @@ namespace Tursit_app_V5.view
         }
 
         #endregion
+
+        private void natureButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedGallery = MainViewModel.natureGallery;
+            ButtonNavigate();
+        }
+
+        private void nightlifeButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedGallery = MainViewModel.nightlifeGallery;
+            ButtonNavigate();
+        }
+
+        private void attractionsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedGallery = MainViewModel.attractionsGallery;
+            ButtonNavigate();
+        }
+
+        private void restaurentsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainViewModel.SelectedGallery = MainViewModel.restaurentsGallery;
+            ButtonNavigate();
+        }
+
+        private void ButtonNavigate()
+        {
+            this.Frame.Navigate(typeof(PicturePage));
+        }
+
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof (LoginPage));
+        }
     }
 }

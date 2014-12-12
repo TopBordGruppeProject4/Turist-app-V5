@@ -13,12 +13,15 @@ namespace Tursit_app_V5.model
         public string Description { get; set; }
         public string Hyperlink { get; set; }
 
-        public Picture(string name, string photo, string description, string hyperlink)
+        public Picture(string name, string photo, string description, string hyperlink = null)
         {
             Name = name;
             Photo = photo;
             Description = description;
-            Hyperlink = hyperlink;
+            if (hyperlink != null)
+            {
+                Hyperlink = hyperlink;
+            }
         }
 
         public override string ToString()
