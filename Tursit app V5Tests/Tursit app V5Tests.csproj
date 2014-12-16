@@ -114,12 +114,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\FileHandlerTests.cs" />
+    <Compile Include="model\UserlistTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="packages.config" />
     <None Include="Tursit app V5Tests_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +143,12 @@
       <Project>{F3B1B379-EC19-4795-894E-65029BD34B1A}</Project>
       <Name>Tursit app V5</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

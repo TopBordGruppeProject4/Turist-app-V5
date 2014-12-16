@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tursit_app_V5.model
 {
-    class Userlist
+    public class Userlist
     {
         private static Userlist _userlistInstance;
 

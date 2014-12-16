@@ -17,20 +17,20 @@ namespace TursitAppV4.Model.Tests
         User testUser = new User("Test", "Mand", "1234", DateTimeOffset.Parse("01/01/1993"), 0, "Single");
 
         [TestMethod()]
-        public async void SaveTest()
+        public void SaveTest()
         {
             _userlist.Add(testUser);
-            FileHandler.Save(_userlist);
+            FileHandler.Save(null);
 
-            var filedata = await FileHandler.Load();
+            var filedata = FileHandler.Load();
 
             Assert.IsNotNull(filedata);
         }
 
         [TestMethod()]
-        public async void LoadTest()
+        public void LoadTest()
         {
-            var filedata = await FileHandler.Load();
+            var filedata = FileHandler.Load();
             Assert.IsNotNull(filedata);
         }
     }
