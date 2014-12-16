@@ -73,29 +73,39 @@
             </TextBlock>
         </Grid>
         <Button x:Name="button1" HorizontalAlignment="Left" Margin="50,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="200" BorderBrush="{x:Null}" Click="button1_Click">
-            <Button.Background>
-                <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedGallery.PictureCollection[0].Photo}"/>
-            </Button.Background>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="{Binding SelectedGallery.PictureCollection[0].Photo}" Stretch="Fill"></Image>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
         <Button HorizontalAlignment="Center" Margin="0,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="200" BorderBrush="{x:Null}" Click="Button_Click">
-            <Button.Background>
-                <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedGallery.PictureCollection[1].Photo}"/>
-            </Button.Background>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="{Binding SelectedGallery.PictureCollection[1].Photo}" Stretch="Fill"></Image>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
         <Button HorizontalAlignment="Right" Margin="0,50,50,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="200" BorderBrush="{x:Null}" Click="Button_Click_1">
-            <Button.Background>
-                <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedGallery.PictureCollection[2].Photo}"/>
-            </Button.Background>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="{Binding SelectedGallery.PictureCollection[2].Photo}" Stretch="Fill"></Image>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
         <Button HorizontalAlignment="Left" Margin="50,100,0,0" Grid.Row="1" VerticalAlignment="Center" Width="200" Height="200" BorderBrush="{x:Null}" Click="Button_Click_2">
-            <Button.Background>
-                <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedGallery.PictureCollection[3].Photo}"/>
-            </Button.Background>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="{Binding SelectedGallery.PictureCollection[3].Photo}" Stretch="Fill"></Image>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
         <Button HorizontalAlignment="Center" Margin="0,100,0,0" Grid.Row="1" VerticalAlignment="Center" Width="200" Height="200" BorderBrush="{x:Null}" Click="Button_Click_3">
-            <Button.Background>
-                <ImageBrush Stretch="Fill" ImageSource="{Binding SelectedGallery.PictureCollection[4].Photo}"/>
-            </Button.Background>
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="{Binding SelectedGallery.PictureCollection[4].Photo}" Stretch="Fill"></Image>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
     </Grid>
 </Page>
