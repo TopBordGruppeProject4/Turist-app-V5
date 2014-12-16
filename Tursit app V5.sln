@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tursit app V5", "Tursit app
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{9DFC7243-A6AC-430C-85C0-D07AE9E8E2E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tursit app V5Tests", "Tursit app V5Tests\Tursit app V5Tests.csproj", "{DA73F06C-0594-488F-9ED5-BACB018328D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,30 @@ Global
 		{9DFC7243-A6AC-430C-85C0-D07AE9E8E2E5}.Release|ARM.ActiveCfg = Release|Any CPU
 		{9DFC7243-A6AC-430C-85C0-D07AE9E8E2E5}.Release|x64.ActiveCfg = Release|Any CPU
 		{9DFC7243-A6AC-430C-85C0-D07AE9E8E2E5}.Release|x86.ActiveCfg = Release|Any CPU
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|ARM.ActiveCfg = Debug|ARM
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|ARM.Build.0 = Debug|ARM
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|ARM.Deploy.0 = Debug|ARM
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|x64.ActiveCfg = Debug|x64
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|x64.Build.0 = Debug|x64
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|x64.Deploy.0 = Debug|x64
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|x86.ActiveCfg = Debug|x86
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|x86.Build.0 = Debug|x86
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Debug|x86.Deploy.0 = Debug|x86
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|ARM.ActiveCfg = Release|ARM
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|ARM.Build.0 = Release|ARM
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|ARM.Deploy.0 = Release|ARM
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|x64.ActiveCfg = Release|x64
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|x64.Build.0 = Release|x64
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|x64.Deploy.0 = Release|x64
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|x86.ActiveCfg = Release|x86
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|x86.Build.0 = Release|x86
+		{DA73F06C-0594-488F-9ED5-BACB018328D5}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

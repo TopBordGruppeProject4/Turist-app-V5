@@ -127,10 +127,20 @@ namespace Tursit_app_V5.viewmodel
 
         private void ClearFavorites(ObservableCollection<Picture> favorites)
         {
-            favorites.Clear();
-            FileHandler.Save(Userlist.ListOfUsers);
-            UserMessageHandler myMessageHandler = new UserMessageHandler("Favoritter er blevet ryddet", "Favoritter ryddet");
-            myMessageHandler.Show();
+            if (CurrentUser.Favourites.Count > 0)
+            {
+                favorites.Clear();
+                FileHandler.Save(Userlist.ListOfUsers);
+                UserMessageHandler myMessageHandler = new UserMessageHandler("Favoritter er blevet ryddet",
+                    "Favoritter ryddet");
+                myMessageHandler.Show();
+            }
+            else
+            {
+                UserMessageHandler myMessageHandler = new UserMessageHandler("Du har ingen favoritter", "Ingen favoritter");
+                myMessageHandler.Show();
+            }
+            
         }
 
         private void RemoveFavoritePicture(Picture favoritePicture)
