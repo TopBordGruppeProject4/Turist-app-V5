@@ -18,7 +18,7 @@ namespace Tursit_app_V5.model
             messageDialog = new MessageDialog(message, title);
         }
 
-        public void Show(string command = "")
+        public void Show()
         {
             messageDialog.ShowAsync();
         }
