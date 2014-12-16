@@ -109,32 +109,73 @@ namespace Tursit_app_V5.view
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[0];
-            ButtonNavigate();
+            try
+            {
+                MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[0];
+                ButtonNavigate();
+            }
+            catch (Exception)
+            {
+                UserMessageHandler myMessageHandler = new UserMessageHandler("Der opstod en fejl", "Fejl opstået");
+                myMessageHandler.Show();
+            }
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[1];
-            ButtonNavigate();
+            try
+            {
+                MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[1];
+                ButtonNavigate();
+            }
+            catch (Exception)
+            {
+                UserMessageHandler myMessageHandler = new UserMessageHandler("Der opstod en fejl", "Fejl opstået");
+                myMessageHandler.Show();
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[2];
-            ButtonNavigate();
+            try
+            {
+                MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[2];
+                ButtonNavigate();
+            }
+            catch (Exception)
+            {
+                UserMessageHandler myMessageHandler = new UserMessageHandler("Der opstod en fejl", "Fejl opstået");
+                myMessageHandler.Show();
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[3];
-            ButtonNavigate();
+            try
+            {
+                MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[3];
+                ButtonNavigate();
+            }
+            catch (Exception)
+            {
+                UserMessageHandler myMessageHandler = new UserMessageHandler("Der opstod en fejl", "Fejl opstået");
+                myMessageHandler.Show();
+            }
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[4];
-            ButtonNavigate();
+            try
+            {
+                MainViewModel.SelectedPicture = MainViewModel.SelectedGallery.PictureCollection[4];
+                ButtonNavigate();
+            }
+            catch (Exception)
+            {
+                UserMessageHandler myMessageHandler = new UserMessageHandler("Der opstod en fejl", "Fejl opstået");
+                myMessageHandler.Show();
+            }
         }
 
         private void ButtonNavigate()

@@ -1,5 +1,9 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+
+using Windows.ApplicationModel.Activation;
+using Windows.System;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Animation;
 using TursitAppV4.Model;
 using Tursit_app_V5.model;
 using Tursit_app_V5.viewmodel;
@@ -49,6 +53,14 @@ namespace Tursit_app_V5.view
             if (loadedUsers != null)
             {
                 MainViewModel.Userlist.ListOfUsers = loadedUsers;
+            }
+        }
+
+        private void UserLogin(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+            {
+                LoginButton_Click(sender, e);
             }
         }
     }
