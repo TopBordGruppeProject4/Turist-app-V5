@@ -9,6 +9,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+	<Page.BottomAppBar>
+		<CommandBar>
+			<CommandBar.SecondaryCommands>
+				<AppBarButton Icon="Delete" Label="Ryd favoritter" Command="{Binding UserClearFavoritesCommand}" CommandParameter="{Binding CurrentUser.Favourites}"/>
+			</CommandBar.SecondaryCommands>
+		</CommandBar>
+	</Page.BottomAppBar>
     <Page.DataContext>
         <viewmodel:MainViewModel></viewmodel:MainViewModel>
     </Page.DataContext>

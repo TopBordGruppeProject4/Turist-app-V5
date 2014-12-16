@@ -73,7 +73,7 @@
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/Roskilde by.png"/>
             </Button.Background>
         </Button>
-        <Button HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="200" Height="200" BorderBrush="{x:Null}">
+        <Button HorizontalAlignment="Center" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="200" Height="200" BorderBrush="{x:Null}" Click="Button_Click">
             <Button.Background>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/StoreLogo.png"/>
             </Button.Background>

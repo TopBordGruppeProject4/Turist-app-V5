@@ -44,7 +44,7 @@
             <TextBlock x:Name="pageTitle" Text="Opret bruger" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
         </Grid>
-        <StackPanel HorizontalAlignment="Center" Height="400" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="325">
+        <StackPanel HorizontalAlignment="Center" Height="325" Margin="0" Grid.Row="1" VerticalAlignment="Center" Width="325">
             <TextBlock TextWrapping="Wrap" Text="Udfyld alle felterne" HorizontalAlignment="Center" Margin="0,0,0,10" FontSize="18"/>
             <TextBox x:Name="Username_TextBlock" Style="{StaticResource TextboxFormStyle}" Margin="0,0,0,10" TextWrapping="Wrap" PlaceholderText="Indtast brugernavn" HorizontalAlignment="Center"/>
             <PasswordBox x:Name="UserPassword_PasswordBox" Style="{StaticResource PasswordboxFormStyle}" Margin="0,0,0,10" PlaceholderText="Indtast adgangskode" HorizontalAlignment="Center"/>
@@ -53,8 +53,6 @@
             <ComboBox x:Name="UserRelationship_ComboBox" Style="{StaticResource ComboBoxFormStyle}" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Top" PlaceholderText="Vælg forhold"/>
             <ComboBox x:Name="UserGender_ComboBox" Style="{StaticResource ComboBoxFormStyle}" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Top" PlaceholderText="Vælg køn"/>
             <Button x:Name="CreateUser_Button" Content="Opret bruger" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Top" Click="CreateUser_Button_Click"/>
-            <TextBlock x:Name="UserErrorTextBlock" Style="{StaticResource TextBlockErrorStyle}" TextWrapping="Wrap" HorizontalAlignment="Center" Visibility="Collapsed"/>
-            <TextBlock x:Name="UserSuccessTextBlock" Style="{StaticResource TextBlockSuccessStyle}" TextWrapping="Wrap" HorizontalAlignment="Center" Visibility="Collapsed"/>
         </StackPanel>
     </Grid>
 </Page>
