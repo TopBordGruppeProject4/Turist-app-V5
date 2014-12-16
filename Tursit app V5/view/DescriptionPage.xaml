@@ -14,9 +14,9 @@
     </Page.DataContext>
     
 	<Page.BottomAppBar>
-        <CommandBar>
-            <AppBarButton Icon="Remove" Label="Fjern favorit" Command="{Binding RemoveUserFavoriteCommand}" CommandParameter="{Binding SelectedPicture}"/>
-			<AppBarButton Icon="Add" Command="{Binding AddUserFavoritesCommand}" CommandParameter="{Binding SelectedPicture}" Label="Tilføj favorit"/>
+		<CommandBar>
+			<AppBarButton Icon="Remove" Label="Fjern favorit"/>
+			<AppBarButton Icon="Add" Label="Tilføj favorit"/>
 		</CommandBar>
 	</Page.BottomAppBar>
 	<Page.TopAppBar>

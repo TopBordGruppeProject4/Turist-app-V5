@@ -7,11 +7,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using TursitAppV4.Model;
 using Tursit_app_V5.Annotations;
 using Tursit_app_V5.Common;
 using Tursit_app_V5.model;
-using Tursit_app_V5.view;
 
 namespace Tursit_app_V5.viewmodel
 {
@@ -26,11 +24,6 @@ namespace Tursit_app_V5.viewmodel
         {
             get { return _selectedPicture; }
             set { _selectedPicture = value; }
-        }
-
-        public User CurrentUser
-        {
-            get { return Userlist.CurrentUser; }
         }
 
         public static Gallery SelectedGallery { get; set; }
@@ -63,8 +56,6 @@ namespace Tursit_app_V5.viewmodel
         Picture _mulligansPicture = new Picture("Mulligans Irish Pub", "ms-appx:///Assets/Mulligans.png", "Hvis du er til rigtig pub stemning, så er Mulligans lige noget for dig. Med live musik hver fredag og lørdag hvor du kan synge med, kan aftenen kun blive god. Du kan også komme til tørstige torsdag, hvor der er billig alkohol hele natten.", "http://www.mulliganspub.dk/");
         public static Gallery nightlifeGallery = new Gallery("Natteliv", new ObservableCollection<Picture>());
 
-        public static Gallery FavoriteGallery = new Gallery("Favoritter", new ObservableCollection<Picture>());
-
         public MainViewModel()
         {
             natureGallery.PictureCollection.Add(_boserupPicture);
@@ -90,111 +81,6 @@ namespace Tursit_app_V5.viewmodel
             nightlifeGallery.PictureCollection.Add(_dansebarPicture);
             nightlifeGallery.PictureCollection.Add(_garbosPicture);
             nightlifeGallery.PictureCollection.Add(_mulligansPicture);
-
-            if (Userlist.CurrentUser != null && Userlist.CurrentUser.Favourites.Count > 0)
-            {
-                FavoriteGallery.PictureCollection = Userlist.CurrentUser.Favourites;
-            }
-        }
-
-        private ICommand _userAddFavoriteCommand;
-        private ICommand _userRemoveFavoriteCommand;
-        private ICommand _userClearFavoritesCommand;
-
-        public ICommand AddUserFavoritesCommand
-        {
-            get
-            {
-                if (_userAddFavoriteCommand == null)
-                {
-                    _userAddFavoriteCommand = new RelayCommand<Picture>(favorite => AddFavoritePicture(favorite));
-                }
-                return _userAddFavoriteCommand;
-            }
-            set { _userAddFavoriteCommand = value; }
-        }
-
-        public ICommand RemoveUserFavoriteCommand
-        {
-            get
-            {
-                if (_userRemoveFavoriteCommand == null)
-                {
-                    _userRemoveFavoriteCommand = new RelayCommand<Picture>(favorite => RemoveFavoritePicture(favorite));
-                }
-                return _userRemoveFavoriteCommand;
-            }
-            set { _userRemoveFavoriteCommand = value; }
-        }
-
-        public ICommand UserClearFavoritesCommand
-        {
-            get
-            {
-                if (_userClearFavoritesCommand == null)
-                {
-                    _userClearFavoritesCommand = new RelayCommand<ObservableCollection<Picture>>(favorites => ClearFavorites(favorites));
-                }
-                return _userClearFavoritesCommand;
-            }
-            set { _userClearFavoritesCommand = value; }
-        }
-
-        private void ClearFavorites(ObservableCollection<Picture> favorites)
-        {
-            favorites.Clear();
-            FileHandler.Save(Userlist.ListOfUsers);
-            UserMessageHandler myMessageHandler = new UserMessageHandler("Favoritter er blevet ryddet", "Favoritter ryddet");
-            myMessageHandler.Show();
-        }
-
-        private void RemoveFavoritePicture(Picture favoritePicture)
-        {
-            User currentUser = Userlist.UserlistInstance.CurrentUser;
-            
-
-            if (currentUser.Favourites.Contains(favoritePicture))
-            {
-                UserMessageHandler myMessageHandler = new UserMessageHandler(favoritePicture.Name + " er blevet fjernet fra dine favoritter", "Favorit fjernet");
-                myMessageHandler.Show();
-
-                currentUser.RemoveFavourite(favoritePicture);
-                FileHandler.Save(Userlist.ListOfUsers);
-            }
-            else
-            {
-                UserMessageHandler myMessageHandler = new UserMessageHandler(favoritePicture.Name + " findes ikke i dine favoritter", "Favorit findes ikke");
-                myMessageHandler.Show();
-            }
-        }
-
-        private void AddFavoritePicture(Picture favoritePicture)
-        {
-            User currentUser = Userlist.UserlistInstance.CurrentUser;
-
-            if (currentUser.Favourites.Contains(favoritePicture))
-            {
-                UserMessageHandler myMessageHandler = new UserMessageHandler(favoritePicture.Name + " findes allerede som favorit", "Favorit findes allerede");
-                myMessageHandler.Show();
-            }
-            else
-            {
-                if (currentUser.Favourites.Count < 5)
-                {
-                    currentUser.AddFavourite(favoritePicture);
-                    FileHandler.Save(Userlist.ListOfUsers);
-                    UserMessageHandler myMessageHandler =
-                        new UserMessageHandler(favoritePicture.Name + " er tilføjet til din favorit liste",
-                            "Favorit tilføjet");
-                    myMessageHandler.Show();
-                }
-                else
-                {
-                    UserMessageHandler myMessageHandler = new UserMessageHandler("Du har nået maks favoritter", "Favorit maximum nået");
-                    myMessageHandler.Show();
-                }
-            }
-            
         }
 
         #region PropertyChanged

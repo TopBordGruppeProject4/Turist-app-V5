@@ -143,29 +143,33 @@ namespace Tursit_app_V5.view
                     {
                         FileHandler.Save(MainViewModel.Userlist.ListOfUsers);
 
-                        UserMessageHandler myMessageHandler = new UserMessageHandler("Brugeren er blevet oprettet ☺", "Bruger oprettet");
-                        myMessageHandler.Show();
-                        this.Frame.Navigate(typeof (LoginPage));
+                        UserSuccessTextBlock.Text = "Brugeren er blevet oprettet ☺";
+                        UserErrorTextBlock.Visibility = Visibility.Collapsed;
+                        UserSuccessTextBlock.Visibility = Visibility.Visible;
                     }
                     else
                     {
-                        UserMessageHandler myMessageHandler = new UserMessageHandler("Der findes en bruger med det brugernavn i forvejen, beklager...", "Fejl");
-                        myMessageHandler.Show();
+                        UserErrorMessage("Der findes en bruger med det brugernavn i forvejen, beklager...");
                     }
                 }
                 else
                 {
-                    UserMessageHandler myMessageHandler = new UserMessageHandler("Tror du, at du er fra fremtiden eller hva?", "Fejl");
-                    myMessageHandler.Show();
+                    UserErrorMessage("Tror du, at du er fra fremtiden eller hva?");
                 }
                 
             }
             catch (Exception)
             {
-                UserMessageHandler myMessageHandler = new UserMessageHandler("Der opstod en fejl... Har du husket at udfylde alle felterne korrekt?", "Fejl");
-                myMessageHandler.Show();
+                UserErrorMessage("Der opstod en fejl... Har du husket at udfylde alle felterne korrekt?");
             }
             
+        }
+
+        private void UserErrorMessage(string message)
+        {
+            UserErrorTextBlock.Text = message;
+            UserSuccessTextBlock.Visibility = Visibility.Collapsed;
+            UserErrorTextBlock.Visibility = Visibility.Visible;
         }
     }
 }

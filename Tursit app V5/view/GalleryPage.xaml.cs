@@ -131,12 +131,6 @@ namespace Tursit_app_V5.view
             ButtonNavigate();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MainViewModel.SelectedGallery = MainViewModel.FavoriteGallery;
-            ButtonNavigate();
-        }
-
         private void ButtonNavigate()
         {
             this.Frame.Navigate(typeof(PicturePage));
