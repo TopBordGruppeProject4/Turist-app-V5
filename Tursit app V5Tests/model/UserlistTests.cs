@@ -20,5 +20,37 @@ namespace Tursit_app_V5.model.Tests
             bool checkstatus = userlist.Check("Test", "1234");
             Assert.IsTrue(checkstatus);
         }
+
+        [TestMethod()]
+        public void CheckTest2()
+        {
+            userlist.ListOfUsers.Add(testUser);
+            bool checkstatus = userlist.Check("Test", "12345");
+            Assert.IsFalse(checkstatus);
+        }
+
+        [TestMethod()]
+        public void CheckTest3()
+        {
+            userlist.ListOfUsers.Add(testUser);
+            bool checkstatus = userlist.Check("Test", "123");
+            Assert.IsFalse(checkstatus);
+        }
+
+        [TestMethod()]
+        public void CheckTest4()
+        {
+            userlist.ListOfUsers.Add(testUser);
+            bool checkstatus = userlist.Check("Teste", "1234");
+            Assert.IsFalse(checkstatus);
+        }
+
+        [TestMethod()]
+        public void CheckTest5()
+        {
+            userlist.ListOfUsers.Add(testUser);
+            bool checkstatus = userlist.Check("Tes", "1234");
+            Assert.IsFalse(checkstatus);
+        }
     }
 }
