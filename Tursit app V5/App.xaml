@@ -26,12 +26,12 @@
             <Setter Property="Background" Value="SaddleBrown"/>
             <Setter Property="Background">
                 <Setter.Value>
-                    <ImageBrush ImageSource="Assets/Wood wall.png" Stretch="UniformToFill"></ImageBrush>
+                    <ImageBrush ImageSource="Assets/Wood wall.png" Stretch="UniformToFill"/>
                 </Setter.Value>
             </Setter>
         </Style>
         <Style TargetType="ComboBox" x:Name="ComboBoxFormStyle">
-            <Setter Property="Width" Value="150"></Setter>
+            <Setter Property="Width" Value="150"/>
         </Style>
     </Application.Resources>
 

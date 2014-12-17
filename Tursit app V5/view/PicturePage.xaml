@@ -9,31 +9,31 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-	<Page.BottomAppBar>
-		<CommandBar>
-			<CommandBar.SecondaryCommands>
-				<AppBarButton Icon="Delete" Label="Ryd favoritter" Command="{Binding UserClearFavoritesCommand}" CommandParameter="{Binding CurrentUser.Favourites}"/>
-			</CommandBar.SecondaryCommands>
-		</CommandBar>
-	</Page.BottomAppBar>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Delete" Label="Ryd favoritter" Command="{Binding UserClearFavoritesCommand}" CommandParameter="{Binding CurrentUser.Favourites}"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
     <Page.DataContext>
         <viewmodel:MainViewModel></viewmodel:MainViewModel>
     </Page.DataContext>
-    
-	<Page.TopAppBar>
-		<AppBar>
-			<Grid>
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition/>
-					<ColumnDefinition/>
-				</Grid.ColumnDefinitions>
-				<StackPanel Orientation="Horizontal">
-					<AppBarButton x:Name="LogoutButton" HorizontalAlignment="Stretch" Icon="Clear" Label="Log ud" VerticalAlignment="Stretch" Click="LogoutButton_Click"/>
-				</StackPanel>
-				<StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
-			</Grid>
-		</AppBar>
-	</Page.TopAppBar>
+
+    <Page.TopAppBar>
+        <AppBar>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal">
+                    <AppBarButton x:Name="LogoutButton" HorizontalAlignment="Stretch" Icon="Clear" Label="Log ud" VerticalAlignment="Stretch" Click="LogoutButton_Click"/>
+                </StackPanel>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -41,6 +41,11 @@
         * Row 1 contains the rest of the page layout
     -->
     <Grid Style="{StaticResource AppBackgroundStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="400*"/>
+        </Grid.ColumnDefinitions>
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -48,11 +53,12 @@
         </Grid.ChildrenTransitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="266*"/>
+            <RowDefinition Height="363*"/>
         </Grid.RowDefinitions>
 
         <!-- Back button and page title -->
-        <Grid>
+        <Grid Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition/>
@@ -72,35 +78,35 @@
                 <Run x:Name="Username"></Run>
             </TextBlock>
         </Grid>
-        <Button x:Name="button1" HorizontalAlignment="Left" Margin="50,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="200" BorderBrush="{x:Null}" Click="button1_Click">
+        <Button x:Name="button1" HorizontalAlignment="Stretch" Margin="60,45,40,45" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="button1_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="{Binding SelectedGallery.PictureCollection[0].Photo}" Stretch="Fill"></Image>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button HorizontalAlignment="Center" Margin="0,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="200" BorderBrush="{x:Null}" Click="Button_Click">
+        <Button HorizontalAlignment="Stretch" Margin="45,60" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="Button_Click" Grid.Column="1">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="{Binding SelectedGallery.PictureCollection[1].Photo}" Stretch="Fill"></Image>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button HorizontalAlignment="Right" Margin="0,50,50,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Height="200" BorderBrush="{x:Null}" Click="Button_Click_1">
+        <Button HorizontalAlignment="Stretch" Margin="50,45" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="Button_Click_1" Grid.Column="2">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="{Binding SelectedGallery.PictureCollection[2].Photo}" Stretch="Fill"></Image>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="50,100,0,0" Grid.Row="1" VerticalAlignment="Center" Width="200" Height="200" BorderBrush="{x:Null}" Click="Button_Click_2">
+        <Button HorizontalAlignment="Stretch" Margin="230,80,360,80" Grid.Row="2" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="Button_Click_2" Grid.ColumnSpan="2">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="{Binding SelectedGallery.PictureCollection[3].Photo}" Stretch="Fill"></Image>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button HorizontalAlignment="Center" Margin="0,100,0,0" Grid.Row="1" VerticalAlignment="Center" Width="200" Height="200" BorderBrush="{x:Null}" Click="Button_Click_3">
+        <Button HorizontalAlignment="Stretch" Margin="360,95,190,95" Grid.Row="2" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="Button_Click_3" Grid.Column="1" Grid.ColumnSpan="2">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="{Binding SelectedGallery.PictureCollection[4].Photo}" Stretch="Fill"></Image>

@@ -52,5 +52,14 @@ namespace Tursit_app_V5.model.Tests
             bool checkstatus = userlist.Check("Tes", "1234");
             Assert.IsFalse(checkstatus);
         }
+
+        [TestMethod()]
+        public void CreateUserTest()
+        {
+            userlist.ListOfUsers.Add(testUser);
+            bool checkstatus = userlist.CreateUser(testUser.Name, testUser.Gender, testUser.Password, testUser.Birthday,
+                testUser.NumberOfChildren, testUser.Relationship);
+            Assert.IsFalse(checkstatus);
+        }
     }
 }
