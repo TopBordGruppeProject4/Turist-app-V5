@@ -78,21 +78,21 @@
                 <Run x:Name="Username"></Run>
             </TextBlock>
         </Grid>
-        <Button x:Name="button1" HorizontalAlignment="Stretch" Margin="60,45,40,45" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="button1_Click">
+        <Button x:Name="button1" HorizontalAlignment="Stretch" Margin="60,30,40,30" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="button1_Click">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="{Binding SelectedGallery.PictureCollection[0].Photo}" Stretch="Fill"></Image>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button HorizontalAlignment="Stretch" Margin="45,60" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="Button_Click" Grid.Column="1">
+        <Button HorizontalAlignment="Stretch" Margin="45,35" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="Button_Click" Grid.Column="1">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="{Binding SelectedGallery.PictureCollection[1].Photo}" Stretch="Fill"></Image>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button HorizontalAlignment="Stretch" Margin="50,45" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="Button_Click_1" Grid.Column="2">
+        <Button HorizontalAlignment="Stretch" Margin="50,30" Grid.Row="1" VerticalAlignment="Stretch" BorderBrush="{x:Null}" Click="Button_Click_1" Grid.Column="2">
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="{Binding SelectedGallery.PictureCollection[2].Photo}" Stretch="Fill"></Image>
