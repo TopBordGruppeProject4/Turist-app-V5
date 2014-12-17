@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="293cc860-7216-4546-97a2-75ffded70a69"
   name="View" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -41,6 +41,46 @@
                 <memberEnd
                   Id="eed150a4-10c2-479a-83fc-0d2ddff2ef5e"
                   name="Mainviewmodel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f53f0c02-ae01-4c00-bdbb-6f9f789e2bc8"
+            isDerived="false"
+            sourceEndRoleName="Loginpage"
+            targetEndRoleName="FileHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="938c0c78-14b3-44a2-91f7-a3cea75a738f"
+              LastKnownName="FileHandler"
+              LastKnownLocation="Package_1104.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aa9ad64f-75c2-4e11-acb0-91b2ada96360"
+                  name="Loginpage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="354cde42-3630-4033-94a1-ba419864c4bf"
+                  name="FileHandler"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -259,6 +299,85 @@
                   aggregation="None"
                   isComposite="false"
                   isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c79b7472-2732-4514-97b4-d6da48b197ea"
+            isDerived="false"
+            sourceEndRoleName="CreateUserpage"
+            targetEndRoleName="FileHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="938c0c78-14b3-44a2-91f7-a3cea75a738f"
+              LastKnownName="FileHandler"
+              LastKnownLocation="Package_1104.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="891452f9-5b46-4cfe-889a-7e17d5b8bfa6"
+                  name="CreateUserpage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0169c5b1-3507-43a6-abf6-6a8c49eaaa2a"
+                  name="FileHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="cafb3c52-e4ef-478a-a18e-43ba3c0ef6af"
+            isDerived="false"
+            sourceEndRoleName="CreateUserpage"
+            targetEndRoleName="UserMessageHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a4d766aa-c468-4c61-af1b-7f494dfa8084"
+              LastKnownName="UserMessageHandler"
+              LastKnownLocation="Package_1104.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aac21fe8-5bf0-4fc3-8b74-05ab7b6d702b"
+                  name="CreateUserpage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7d15041-1017-4bf3-8670-dafcac4f6f0c"
+                  name="UserMessageHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>

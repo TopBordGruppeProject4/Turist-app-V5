@@ -121,6 +121,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="packages.config" />
+    <None Include="Testplan\Test plan.docx" />
     <None Include="Tursit app V5Tests_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
   dslVersion="1.0.0.0"
   Id="7e4f41e4-cba8-4518-b868-7ea5a904f3aa"
   name="viewmodel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -120,6 +120,45 @@
                 <memberEnd
                   Id="fa49cee0-d2d3-4e4e-a7cc-6bb596c7212a"
                   name="Picture"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="91ade473-60bd-4be5-bada-6fdbbdecfde6"
+            isDerived="false"
+            sourceEndRoleName="Mainviewmodel"
+            targetEndRoleName="UserMessageHandler"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a4d766aa-c468-4c61-af1b-7f494dfa8084"
+              LastKnownName="UserMessageHandler"
+              LastKnownLocation="Package_1104.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e4358cab-b58e-4ee7-b922-2687a1792255"
+                  name="Mainviewmodel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="715e1f5c-37cf-42b7-a23c-ddf1202be7ef"
+                  name="UserMessageHandler"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -325,6 +364,147 @@
           <operation
             Id="6b9b0ffc-7f72-4f2b-8112-ffe60d45c853"
             name="LoginCommand"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="938c0c78-14b3-44a2-91f7-a3cea75a738f"
+        name="FileHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="8e98125b-e066-4c8f-9112-98c0b0dea5bb"
+            isDerived="false"
+            sourceEndRoleName="FileHandler"
+            targetEndRoleName="UserList"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fb108b73-33eb-4fbe-9214-57839eff5808"
+              LastKnownName="UserList"
+              LastKnownLocation="Package1_1104.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ccb0db8-bca1-4430-9637-1b92ba1b1557"
+                  name="FileHandler"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6166771e-4f2e-459f-a602-e99d74311079"
+                  name="UserList"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="2024de16-525b-4c2e-b839-4567146a6f83"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ef2ce742-aa7e-4970-871f-fc156cca6481"
+            name="Load"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2e22c0a9-da64-44dc-90bd-6ba91551404b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="04a09960-cd91-496f-b3cb-53fde241fe08"
+                      LastKnownName="Task"
+                      LastKnownLocation="Package_1104.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f7ca9f38-8369-4c23-8826-28f57bf3256e"
+            name="SerializeSaveGameAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2215da0b-f411-48d4-a4bf-1e357f5f171c"
+            name="DeserializeFavoritAsync"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="da1787b2-2dcc-4ea5-9e21-fa6552abdae3"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="04a09960-cd91-496f-b3cb-53fde241fe08"
+                      LastKnownName="Task"
+                      LastKnownLocation="Package_1104.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="04a09960-cd91-496f-b3cb-53fde241fe08"
+        name="Task" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a4d766aa-c468-4c61-af1b-7f494dfa8084"
+        name="UserMessageHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="8a0ad273-c1cb-4433-acf3-a82bc3238dfa"
+            name="Show"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

@@ -18,14 +18,14 @@
       </relativeChildShapes>
     </lifelineShape>
     <lifelineShape Id="9084c8b6-71c2-4396-ac47-66ee62a32e47" absoluteBounds="3.875, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="28e1b147-530f-4409-a83c-5e99add94382" LastKnownName=": Login" />
+      <lifelineMoniker Id="28e1b147-530f-4409-a83c-5e99add94382" LastKnownName=": CommandHandler" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="69f7aadf-c44b-473a-b65c-945d444a0591" absoluteBounds="3.45, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="28e1b147-530f-4409-a83c-5e99add94382" LastKnownName=": Login" />
+        <umlLifelineHeadShape Id="69f7aadf-c44b-473a-b65c-945d444a0591" absoluteBounds="3.2726620745658872, 0.6, 1.3546758508682251, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="28e1b147-530f-4409-a83c-5e99add94382" LastKnownName=": CommandHandler" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="6f6a14b5-de93-4903-b056-48debdc0a70b" absoluteBounds="3.875, 1, 0, 7">
-          <lifelineMoniker Id="28e1b147-530f-4409-a83c-5e99add94382" LastKnownName=": Login" />
+          <lifelineMoniker Id="28e1b147-530f-4409-a83c-5e99add94382" LastKnownName=": CommandHandler" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="73aa3031-9c1c-484f-a17b-790503610752" absoluteBounds="3.875, 1.7083333333333333, 0.15, 1.497916666666667" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="dab37084-3e97-41ab-b345-14767be7d23e" LastKnownName="BehaviorExecutionSpecification1" />
