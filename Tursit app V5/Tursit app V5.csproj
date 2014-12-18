@@ -140,6 +140,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="Dokumentation\Turist app v5 dokumentation.docx" />
     <None Include="packages.config" />
     <None Include="Tursit app V5_TemporaryKey.pfx" />
   </ItemGroup>
