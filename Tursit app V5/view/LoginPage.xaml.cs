@@ -4,7 +4,6 @@ using Windows.ApplicationModel.Activation;
 using Windows.System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
-using TursitAppV4.Model;
 using Tursit_app_V5.model;
 using Tursit_app_V5.viewmodel;
 

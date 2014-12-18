@@ -1,5 +1,4 @@
-﻿using TursitAppV4.Model;
-using Tursit_app_V5.Common;
+﻿using Tursit_app_V5.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;

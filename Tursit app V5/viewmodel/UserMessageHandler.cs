@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.UI.Popups;
-using Windows.UI.Xaml.Controls;
-using Tursit_app_V5.view;
+﻿using Windows.UI.Popups;
 
-namespace Tursit_app_V5.model
+namespace Tursit_app_V5.viewmodel
 {
     class UserMessageHandler
     {

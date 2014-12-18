@@ -7,7 +7,6 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using TursitAppV4.Model;
 using Tursit_app_V5.Annotations;
 using Tursit_app_V5.Common;
 using Tursit_app_V5.model;

@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
-using Windows.UI.Popups;
-using Windows.UI.Xaml;
 using Newtonsoft.Json;
 using Tursit_app_V5.model;
 
-namespace TursitAppV4.Model
+namespace Tursit_app_V5.viewmodel
 {
    public class FileHandler
     {
