@@ -465,12 +465,12 @@
                     <associationHasOwnedEnds>
                       <memberEnd Id="61fa1c6f-8c9d-46ed-bd0f-799a36d7fb42" name="Picture" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
                         <lowerValueInternal>
-                          <literalString Id="9a5d7e3c-0574-452e-83eb-77b92e84e5b2" name="Lower" value="*">
+                          <literalString Id="9a5d7e3c-0574-452e-83eb-77b92e84e5b2" name="Lower" value="0-5">
                             <elementDefinition Id="7cba4586-8d4e-4a67-b1c4-df66b9d592fe" />
                           </literalString>
                         </lowerValueInternal>
                         <upperValueInternal>
-                          <literalString Id="fe6020bb-d7ce-4185-a308-3f1009e8d4e5" name="Upper" value="*">
+                          <literalString Id="fe6020bb-d7ce-4185-a308-3f1009e8d4e5" name="Upper" value="0-5">
                             <elementDefinition Id="9f540bbf-da23-497a-a588-7d8fafcbb182" />
                           </literalString>
                         </upperValueInternal>
