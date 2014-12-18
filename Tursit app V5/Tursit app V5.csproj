@@ -109,17 +109,17 @@
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
-    <Compile Include="model\FileHandler.cs" />
     <Compile Include="model\Gallery.cs" />
     <Compile Include="model\Picture.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="model\Userlist.cs" />
-    <Compile Include="model\UserMessageHandler.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="viewmodel\CommandHandler.cs" />
+    <Compile Include="viewmodel\FileHandler.cs" />
     <Compile Include="viewmodel\MainViewModel.cs" />
     <Compile Include="viewmodel\RelayCommand.cs" />
+    <Compile Include="viewmodel\UserMessageHandler.cs" />
     <Compile Include="view\CreateUserPage.xaml.cs">
       <DependentUpon>CreateUserPage.xaml</DependentUpon>
     </Compile>

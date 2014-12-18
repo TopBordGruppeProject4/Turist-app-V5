@@ -145,9 +145,9 @@ namespace Tursit_app_V5.viewmodel
         private void RemoveFavoritePicture(Picture favoritePicture)
         {
             User currentUser = Userlist.UserlistInstance.CurrentUser;
-            
+            bool picturePresent = currentUser.Favourites.Any(pic => pic.Name == favoritePicture.Name);
 
-            if (currentUser.Favourites.Contains(favoritePicture))
+            if (picturePresent)
             {
                 UserMessageHandler myMessageHandler = new UserMessageHandler(favoritePicture.Name + " er blevet fjernet fra dine favoritter", "Favorit fjernet");
                 myMessageHandler.Show();
@@ -165,8 +165,9 @@ namespace Tursit_app_V5.viewmodel
         private void AddFavoritePicture(Picture favoritePicture)
         {
             User currentUser = Userlist.UserlistInstance.CurrentUser;
+            bool picturePresent = currentUser.Favourites.Any(pic => pic.Name == favoritePicture.Name);
 
-            if (currentUser.Favourites.Contains(favoritePicture))
+            if (picturePresent)
             {
                 UserMessageHandler myMessageHandler = new UserMessageHandler(favoritePicture.Name + " findes allerede som favorit", "Favorit findes allerede");
                 myMessageHandler.Show();
